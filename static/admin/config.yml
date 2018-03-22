@@ -1,6 +1,8 @@
 backend:
   name: git-gateway
-  repo: KloosterBoerderijFestival/kbf-website-2018
+  accept_roles: #optional - accepts all users if left out
+    - admin
+    - editor
   branch: master
 
 publish_mode: editorial_workflow

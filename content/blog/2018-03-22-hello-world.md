@@ -1,5 +1,5 @@
 ---
-date: '2018-03-22 09:34:14'
+date: 2018-03-22
 title: Hello World
 author: Mattias
 ---

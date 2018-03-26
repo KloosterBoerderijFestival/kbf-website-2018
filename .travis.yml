@@ -1,23 +1,34 @@
-# .travis.yml
 dist: trusty
 sudo: required
-
 branches:
   only:
   - master
-
 install:
- - sudo apt-get install -y jq
- - URL=$( curl -s "https://api.github.com/repos/gohugoio/hugo/releases/latest" | jq -r '.assets[] | select(.name | endswith("Linux-64bit.deb")) | .browser_download_url' )
- - wget -O /tmp/hugo.deb $URL
- - sudo dpkg -i /tmp/hugo.deb
-
+- sudo apt-get install -y jq
+- URL=$( curl -s "https://api.github.com/repos/gohugoio/hugo/releases/latest" | jq
+  -r '.assets[] | select(.name | endswith("Linux-64bit.deb")) | .browser_download_url'
+  )
+- wget -O /tmp/hugo.deb $URL
+- sudo dpkg -i /tmp/hugo.deb
 script:
- - hugo
+- hugo
+
+before_install:
+- openssl aes-256-cbc -K $encrypted_13194431094d_key -iv $encrypted_13194431094d_iv
+  -in deploy_rsa.enc -out /tmp/deploy_rsa -d
+- eval "$(ssh-agent -s)"
+- chmod 600 /tmp/deploy\_rsa
+- ssh-add /tmp/deploy\_rsa
+
+env:
+  global:
+  - secure: m1WnnSkUpFBlOkmqe8FyFgUdEGlnnZsin8uzKqa2Uia52vdhy7+6RqC81MAAWmsqxYOEn2CXsrTDWk+hQU42333+RmTxk0+vo1f0ubukuPclnv1rpM498Xm7xd0hmlFoUT6iiM+Uv2KkBigqddEZnVYalMOHOlSL9TR8E+cwbi1KOz0u9fEY3hcGBrJTVGGhc6XmH65sQFMA8ZdrWW8GO/lkzVBflHYt1uYkTGs2WOSb/iND2ht6pSOCyckWA8g/E8/73YTYrrwlO7erAzTc+swLbBpY6bSH+EhEG7DkziPGfnhy/MhNOZnoP3mJWNmIfQxRmQdVy16q0eBdFYZhte1xmuQ0J+p2LCtW3ZNWUCUZhzRdHPtc6O9q+HSCDv2R11Hy/OiIBH20kwsbqCsZWUHPwZa52yXFiVMsQIBFRqc5EwKbrXOJ7qHO4aE72LI7MmDhpXVH7LoykkhzJlZbqgQLpWByza7wcuQxqZVgqVCCGQklFtgEheABJpECpwun+kDb9cwjMKgxZJ/YHxb7KSL/3Qmi8RFBhhfhgys0byR2gEKzT/kl2X+4AHilvSeQqzbVB2vyMNiq0zHyButCbPUmUSQNR672OT1HG2EQ+sHi3MfMwhe1TcJzYFBaKBAD+2pxW3pkAvWiVACnnFy5Hy5+pA+JusDKd81eZ37VWzo=
+  - secure: y/fUUmMntUeF9hd3Js09vgRatUXIPhnW+36wsn2x2Lw8zGLrQQ8iM43sZHjh2ev91BcslvgJZaPSGN43aoGiHP6KTZmbaahxcj/XAXK9EnWssDDTTpkVSo4TYZokYrDfiTnTcEcPocWXqqulwF0ndl74bsJJZ43MHJIqlSckb/68DcVp7bVosSRWm4QN9HbMMi92JvRcRgFYCr2LFmZohl+RHtWMFU/NO74iOBGeOmWnNcJCT8hauefm1TZq8VToHSqYm1BGxzZQZTgdnm+pd2IVR0l2EqJACsPEot2HtcJoXSMNQmyhxBFoTAun2QcQYuBxDLbBP3KzOIY5lBQO4x1jfB+Z2zqNJvRi//Ae13l+F7VW4I7GNBaFz65++00ApoPGOf6+3im5wfiDXBOcFdX73cIdw9LFTkIoe0eLplxABAcoEhGjDdBblAmKjuIilRNhpyQL9KbiusW/nGy0QU18ISL+8UVl5Y9qzsVnHyoh431tsyjLeNk6oD0xH22GGSOhHztONsUmTE7JffalhDYBFhfumwonTL1+LX94EESOyIsQSvuT6NHK8BIOBaNPBkjQUQD3djoeFRKwwt02bbn/mIcT0/Zx+hmvGIUYl3zwAWViof2fFJ6qOqSF/4k4INxMjNAcl4cZXPs3rvDohBUig4Pl/mYD/oPSXlrvbT8=
+  - secure: ibxkPm/2KdgO+p6A9w1PxrcaxT0rEtRUbh0yr7qjmcy29vATh1jeQOgeueyA9zScSCITGVZekmACAsVAyq8tS+xPoiypOzJliyiKdvUz48sVVGiz5JQhB64lQVxFx9m0ejBpQScjnY20AeBv1ElnskbKaNdsAWzwzr27mOIh+DhhjNILWSaOuYz4nF/PA18Xwn7tayRdTPZ/zumBVzKBc8Pj+LTAQvIntvUwYSOCD23fKJn4+rroMbdxZvpWCW2Oq5ROUSRNRJ71o1GN2cq9Cu/UZggI0ghD9Zsst1n7HaNw3qaKJgmOVJIQQl8YmTqwOLlzcXxfUWpA8TmUiQm6KIq3VGyHFKjP/U+1lhNP0YRcoh7Lug4SgR3s5MlyZehZpM2pPmddpgNbE5U6vavusvVsFzyiehCLlrQ7szfrp+m0T3k32m2zcJvwYM+kRkBpvJE+rHjejHCJYS38nhlu4CLgBEzO4X8t2CoJW//t/VRuBySvIwdubyf5jyv88FHekBnfm3zse4slEhEtcEJ1WwJKKadjOQ5FdP/635U/u+23maRdfIIlO0hEw6kK30HhtZJ5emmA9Ywx1fWon5yeMTAACZu6vQxpwXhvhl3GBJAs6bukV8ZawgUy2TbbdHTuEIQFj3KsrO1A7HhIkvb3bFGuRF79zUi8CT5wq1ZIC9U=
 
 deploy:
-  - provider: script
-    script: ./deploy.sh
-    skip_cleanup: true
-    on:
-branch: master
+  provider: script
+  skip_cleanup: true
+  script: rsync -r --quiet --delete-after public/* $DEPLOY_USER@$DEPLOY_HOST:$DEPLOY_DIRECTORY
+  on:
+    branch: master

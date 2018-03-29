@@ -1,5 +1,7 @@
 backend:
   name: git-gateway
+  identity_url: https://heuristic-tereshkova-e8643d.netlify.com/.netlify/identity
+  gateway_url: https://heuristic-tereshkova-e8643d.netlify.com/.netlify/git/github
   accept_roles: #optional - accepts all users if left out
     - admin
     - editor

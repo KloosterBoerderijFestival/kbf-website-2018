@@ -1,6 +1,21 @@
 <?php
 
 require_once('ExcelWriter.php');
+require_once('InsForm.php');
+
+$form = new InsForm();
+$fieldSet = new InsFieldSet();
+$fieldSet->setTitle("Persoonlijke informatie");
+
+$fieldSet->addField(new InsField('Voornaam', 'fname', true));
+$fieldSet->addField(new InsField('Achternaam', 'lname', true));
+$fieldSet->addField(new InsField('Email', 'email', true));
+
+$form->addFieldset($fieldSet);
+
+$form->display();
+
+var_dump($form->getAllFields());
 
 $GLOBALS['fieldinfo'] = array();
 
@@ -18,13 +33,7 @@ function field($title, $name, $required)
 ?>
 <h3 class="section-heading">Aanmeldingdetails</h3>
 <form method="post">
-    <fieldset><h4>Persoonlijke informatie</h4>
-        <table border="0">
-            <?php field('Voornaam', 'fname', true); ?>
-            <?php field('Achternaam', 'lname', true); ?>
-            <?php field('Email', 'email', true); ?>
-        </table>
-    </fieldset>
+
 
     <fieldset><h4>Wat we nog meer willen weten</h4>
         <table border="0">
@@ -134,7 +143,7 @@ else {
 
     try {
         $excelWriter = new ExcelWriter("opslag/inschrijvingen.xlsx");
-        $excelWriter->fillRow($GLOBALS['fieldinfo']);
+        $excelWriter->fillRow($form->getAllFields());
         $excelWriter->saveSpreadSheet();
     } catch (Exception $e) {
         die('<font color="red"><b>Er is iets mis gegaan met je inschrijving! Something went wrong!</b></font>');

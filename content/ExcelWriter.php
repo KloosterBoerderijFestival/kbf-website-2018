@@ -37,11 +37,11 @@ class ExcelWriter
         return $row;
     }
 
-    public function fillRow($dataArray)
+    public function fillRow($fields)
     {
         $i = 0;
-        foreach ($dataArray as $key => $value) {
-            $headertext = $value[0];
+        foreach ($fields as $field) {
+            $headertext = $field->title;
             do {
                 $i++;
                 echo $i;
@@ -51,7 +51,7 @@ class ExcelWriter
                     $this->activeSheet->setCellValueByColumnAndRow($i, 1, $headertext);
                 }
             } while ($header != $headertext);
-            $this->activeSheet->setCellValueByColumnAndRow($i, $this->currentRow, $_POST[$key]);
+            $this->activeSheet->setCellValueByColumnAndRow($i, $this->currentRow, $_POST[$field->name]);
         }
     }
 

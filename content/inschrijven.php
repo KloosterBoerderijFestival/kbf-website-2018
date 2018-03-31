@@ -1,18 +1,16 @@
 <?php
 
-require 'vendor/autoload.php';
-
-use PhpOffice\PhpSpreadsheet\Spreadsheet;
-use PhpOffice\PhpSpreadsheet\Writer\Xlsx;
+require_once('ExcelWriter.php');
 
 $GLOBALS['fieldinfo'] = array();
 
-function field($title,$name,$required) {
+function field($title, $name, $required)
+{
     $in = '';
-    if($required) {
+    if ($required) {
         $in = '<em>*</em>';
     }
-    echo '<tr><td><label for="'.$name.'">'.$title.$in.':</label></td><td><input type="text" name="'.$name.'" value=""/></td></tr>';
+    echo '<tr><td><label for="' . $name . '">' . $title . $in . ':</label></td><td><input type="text" name="' . $name . '" value=""/></td></tr>';
     $GLOBALS['fieldinfo'][$name] = array($title, $required);
 }
 
@@ -22,131 +20,128 @@ function field($title,$name,$required) {
 <form method="post">
     <fieldset><h4>Persoonlijke informatie</h4>
         <table border="0">
-            <?php field('Voornaam','fname',true); ?>
-            <?php field('Achternaam','lname',true); ?>
-            <?php field('Email','email',true); ?>
+            <?php field('Voornaam', 'fname', true); ?>
+            <?php field('Achternaam', 'lname', true); ?>
+            <?php field('Email', 'email', true); ?>
         </table>
     </fieldset>
 
     <fieldset><h4>Wat we nog meer willen weten</h4>
         <table border="0">
-            <tr><td><label for="kamperen" class="ee-reg-page-questions">Wil je graag blijven kamperen?<em>*</em></label></td><td>
+            <tr>
+                <td><label for="kamperen" class="ee-reg-page-questions">Wil je graag blijven kamperen?<em>*</em></label>
+                </td>
+                <td>
                     <select name="kamperen">
                         <option value="">Selecteer &eacute;&eacute;n</option>
                         <option value="Ja"> Ja</option>
                         <option value="Nee"> Nee</option>
-                    </select></td></tr>
-            <?php field('Heb je dieetwensen?','dieetwensen',false); ?>
-            <?php field('Wat is je telefoonnummer?','telnr',true); ?>
-            <?php field('Welke muziekinstrumenten ben je van plan mee te nemen?','muziekinstrumenten',false); ?>
-            <?php field('Zou je zelf een workshop(je) willen geven, en zo ja, waarover?','workshopje',false); ?>
-            <label for="MULTIPLE_14" class="ee-reg-page-questions">Welke dagen kom je naar het KloosterBoerderijFestival?<em>*</em></label> <ul class="options-list-check event_form_field">
+                    </select></td>
+            </tr>
+            <?php field('Heb je dieetwensen?', 'dieetwensen', false); ?>
+            <?php field('Wat is je telefoonnummer?', 'telnr', true); ?>
+            <?php field('Welke muziekinstrumenten ben je van plan mee te nemen?', 'muziekinstrumenten', false); ?>
+            <?php field('Zou je zelf een workshop(je) willen geven, en zo ja, waarover?', 'workshopje', false); ?>
+            <label for="MULTIPLE_14" class="ee-reg-page-questions">Welke dagen kom je naar het
+                KloosterBoerderijFestival?<em>*</em></label>
+            <ul class="options-list-check event_form_field">
                 <li>
                     <label for="Devolledigeweek(wo-wo)-4_1" class="ee-reg-page-questions checkbox-lbl">
-                        <input id="Devolledigeweek(wo-wo)-4_1"  title="" class=" required  ee-reg-page-questions MULTIPLE_14" name="MULTIPLE_14[]"  type="checkbox" value="De volledige week (wo-wo)" />
+                        <input id="Devolledigeweek(wo-wo)-4_1" title=""
+                               class=" required  ee-reg-page-questions MULTIPLE_14" name="MULTIPLE_14[]" type="checkbox"
+                               value="De volledige week (wo-wo)"/>
                         <span>De volledige week (wo-wo)</span>
                     </label>
                 </li>
                 <li>
                     <label for="woensdag22/7-4_1" class="ee-reg-page-questions checkbox-lbl">
-                        <input id="woensdag22/7-4_1"  title="" class=" required  ee-reg-page-questions MULTIPLE_14" name="MULTIPLE_14[]"  type="checkbox" value="woensdag 22/7" />
+                        <input id="woensdag22/7-4_1" title="" class=" required  ee-reg-page-questions MULTIPLE_14"
+                               name="MULTIPLE_14[]" type="checkbox" value="woensdag 22/7"/>
                         <span>woensdag 22/7</span>
                     </label>
                 </li>
                 <li>
                     <label for="donderdag23/7-4_1" class="ee-reg-page-questions checkbox-lbl">
-                        <input id="donderdag23/7-4_1"  title="" class=" required  ee-reg-page-questions MULTIPLE_14" name="MULTIPLE_14[]"  type="checkbox" value="donderdag 23/7" />
+                        <input id="donderdag23/7-4_1" title="" class=" required  ee-reg-page-questions MULTIPLE_14"
+                               name="MULTIPLE_14[]" type="checkbox" value="donderdag 23/7"/>
                         <span>donderdag 23/7</span>
                     </label>
                 </li>
                 <li>
                     <label for="vrijdag24/7-4_1" class="ee-reg-page-questions checkbox-lbl">
-                        <input id="vrijdag24/7-4_1"  title="" class=" required  ee-reg-page-questions MULTIPLE_14" name="MULTIPLE_14[]"  type="checkbox" value="vrijdag 24/7" />
+                        <input id="vrijdag24/7-4_1" title="" class=" required  ee-reg-page-questions MULTIPLE_14"
+                               name="MULTIPLE_14[]" type="checkbox" value="vrijdag 24/7"/>
                         <span>vrijdag 24/7</span>
                     </label>
                 </li>
                 <li>
                     <label for="zaterdag25/7-4_1" class="ee-reg-page-questions checkbox-lbl">
-                        <input id="zaterdag25/7-4_1"  title="" class=" required  ee-reg-page-questions MULTIPLE_14" name="MULTIPLE_14[]"  type="checkbox" value="zaterdag 25/7" />
+                        <input id="zaterdag25/7-4_1" title="" class=" required  ee-reg-page-questions MULTIPLE_14"
+                               name="MULTIPLE_14[]" type="checkbox" value="zaterdag 25/7"/>
                         <span>zaterdag 25/7</span>
                     </label>
                 </li>
                 <li>
                     <label for="zondag26/7-4_1" class="ee-reg-page-questions checkbox-lbl">
-                        <input id="zondag26/7-4_1"  title="" class=" required  ee-reg-page-questions MULTIPLE_14" name="MULTIPLE_14[]"  type="checkbox" value="zondag 26/7" />
+                        <input id="zondag26/7-4_1" title="" class=" required  ee-reg-page-questions MULTIPLE_14"
+                               name="MULTIPLE_14[]" type="checkbox" value="zondag 26/7"/>
                         <span>zondag 26/7</span>
                     </label>
                 </li>
                 <li>
                     <label for="maandag27/7-4_1" class="ee-reg-page-questions checkbox-lbl">
-                        <input id="maandag27/7-4_1"  title="" class=" required  ee-reg-page-questions MULTIPLE_14" name="MULTIPLE_14[]"  type="checkbox" value="maandag 27/7" />
+                        <input id="maandag27/7-4_1" title="" class=" required  ee-reg-page-questions MULTIPLE_14"
+                               name="MULTIPLE_14[]" type="checkbox" value="maandag 27/7"/>
                         <span>maandag 27/7</span>
                     </label>
                 </li>
                 <li>
                     <label for="dinsdag28/7-4_1" class="ee-reg-page-questions checkbox-lbl">
-                        <input id="dinsdag28/7-4_1"  title="" class=" required  ee-reg-page-questions MULTIPLE_14" name="MULTIPLE_14[]"  type="checkbox" value="dinsdag 28/7" />
+                        <input id="dinsdag28/7-4_1" title="" class=" required  ee-reg-page-questions MULTIPLE_14"
+                               name="MULTIPLE_14[]" type="checkbox" value="dinsdag 28/7"/>
                         <span>dinsdag 28/7</span>
                     </label>
                 </li>
                 <li>
                     <label for="woensdag29/7-4_1" class="ee-reg-page-questions checkbox-lbl">
-                        <input id="woensdag29/7-4_1"  title="" class=" required  ee-reg-page-questions MULTIPLE_14" name="MULTIPLE_14[]"  type="checkbox" value="woensdag 29/7" />
+                        <input id="woensdag29/7-4_1" title="" class=" required  ee-reg-page-questions MULTIPLE_14"
+                               name="MULTIPLE_14[]" type="checkbox" value="woensdag 29/7"/>
                         <span>woensdag 29/7</span>
                     </label>
-                </li></ul></div><div class="event_form_field">
-                <?php field('Hoe oud ben je?','leeftijd',true); ?>
-                <?php field('Wat zoek je of verwacht je op het KloosterBoerderijFestival?','verwachtingen',true); ?>
-                <?php field('Waar denk je aan als je aan een boerderij denkt?','denkaanboerderij',false); ?>
-                <?php field('Wat is je favoriete eten?','favorieteeten',false); ?>
-                <?php field('Waar kom je vandaan?','waarvandaan',false); ?>
-                <?php field('Heb je verder nog vragen?','verderevragen',false); ?>
+                </li>
+            </ul>
+            </div>
+            <div class="event_form_field">
+                <?php field('Hoe oud ben je?', 'leeftijd', true); ?>
+                <?php field('Wat zoek je of verwacht je op het KloosterBoerderijFestival?', 'verwachtingen', true); ?>
+                <?php field('Waar denk je aan als je aan een boerderij denkt?', 'denkaanboerderij', false); ?>
+                <?php field('Wat is je favoriete eten?', 'favorieteeten', false); ?>
+                <?php field('Waar kom je vandaan?', 'waarvandaan', false); ?>
+                <?php field('Heb je verder nog vragen?', 'verderevragen', false); ?>
         </table>
         <input type="submit" value="Verzenden"/>
     </fieldset>
 </form>
 <?php
 //}
-if(false) echo '1';
+if (false) echo '1';
 else {
 
     if (!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
-        die('Het lijkt erop dat je geen geldig e-mailadres hebt ingevuld ('.$_POST['email'].'). Kun je het nog eens proberen?');
+        die('Het lijkt erop dat je geen geldig e-mailadres hebt ingevuld (' . $_POST['email'] . '). Kun je het nog eens proberen?');
     }
-    echo '<pre>';
+    echo '<pre>hai';
 
-
-    $reader = new \PhpOffice\PhpSpreadsheet\Reader\Xlsx();
-    $spreadsheet = $reader->load("data/hello world.xlsx");
-    $i = 0;
-    var_dump($GLOBALS['fieldinfo']);
-
-    //$spreadsheet->getActiveSheet()->setCellValueByColumnAndRow(1,1, 'hai 12344');
-    if($spreadsheet->getActiveSheet()->getCellByColumnAndRow(1,1) != 'nr') {
-        $spreadsheet->getActiveSheet()->setCellValueByColumnAndRow(1,1, 'nr');
+    try {
+        $excelWriter = new ExcelWriter("opslag/inschrijvingen.xlsx");
+        $excelWriter->fillRow($GLOBALS['fieldinfo']);
+        $excelWriter->saveSpreadSheet();
+    } catch (Exception $e) {
+        die('<font color="red"><b>Er is iets mis gegaan met je inschrijving! Something went wrong!</b></font>');
     }
-    $row = 2;
-    while($spreadsheet->getActiveSheet()->getCellByColumnAndRow(1,$row) != '') {
-        $row++;
-    }
-    $spreadsheet->getActiveSheet()->setCellValueByColumnAndRow(1,$row, $row-1);
+    echo 'hoi';
 
-    foreach($GLOBALS['fieldinfo'] as $key => $value) {
-        $headertext = $value[0];
-        do {
-            $i++;
-            echo $i;
-            $header = $spreadsheet->getActiveSheet()->getCellByColumnAndRow($i,1);
-            if($header == '') {
-                $header = $headertext;
-                $spreadsheet->getActiveSheet()->setCellValueByColumnAndRow($i,1, $headertext);
-            }
-        } while($header != $headertext);
-        $spreadsheet->getActiveSheet()->setCellValueByColumnAndRow($i, $row, $_POST[$key]);
-    }
 
-    $writer = new Xlsx($spreadsheet);
-    $writer->save('data/hello world.xlsx');
     /*
         $spreadsheet = new Spreadsheet();
         $sheet = $spreadsheet->getActiveSheet();

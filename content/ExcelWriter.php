@@ -1,5 +1,10 @@
 <?php
 
+/* https://phpspreadsheet.readthedocs.io/en/develop/
+ * Install using
+ * # composer require phpoffice/phpspreadsheet
+ * (in the current directory)
+ */
 require 'vendor/autoload.php';
 
 use PhpOffice\PhpSpreadsheet\Spreadsheet;

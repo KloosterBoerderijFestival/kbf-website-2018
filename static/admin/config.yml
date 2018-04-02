@@ -21,7 +21,6 @@ collections: # A list of collections the CMS should be able to edit
       - {label: Date/Time, name: date, widget: datetime}
       - {label: Post Title, name: title, widget: string}
       - {label: Content, name: body, widget: markdown}
-      - {label: Author, name: author, widget: relation, collection: authors, searchFields: ["first_name", "last_name"], valueField: "title"}
 
   - name: settings # Used in routes, ie.: /admin/collections/:slug/edit
     label: Settings

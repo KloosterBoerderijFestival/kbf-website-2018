@@ -33,4 +33,3 @@ collections: # A list of collections the CMS should be able to edit
         name: site
         fields:
           - {label: Site Title, name: title, widget: string}
-          - {label: Items Per Page, name: paginate, widget: number}

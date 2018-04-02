@@ -18,7 +18,7 @@ collections: # A list of collections the CMS should be able to edit
     create: true # Allow users to create new documents in this collection
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields: # The fields each document in this collection have
-      - {label: Date/Time, name: date, widget: datetime, format: YYYY-MM-DD hh:mm:ss}
+      - {label: Date/Time, name: date, widget: datetime}
       - {label: Post Title, name: title, widget: string}
       - {label: Content, name: body, widget: markdown}
       - {label: Author, name: author, widget: relation, collection: authors, searchFields: ["first_name", "last_name"], valueField: "title"}

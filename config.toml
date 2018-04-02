@@ -11,3 +11,8 @@ title = "KloosterBoerderijFestival 2018"
     url = "/blog/"
     name = "Blog"
     weight = 2
+
+[params]
+piwik     = true                         # If true, Piwik integration is enabled
+piwik_url = "//analytics.biomatt.nl/"    # URL to your Piwik installation. Must End with a slash
+piwik_id  = 5                             # Id of your site in Piwik

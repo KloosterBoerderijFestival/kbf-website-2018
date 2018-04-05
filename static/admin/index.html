@@ -9,10 +9,15 @@
   <link rel="stylesheet" href="https://unpkg.com/netlify-cms/dist/cms.css" />
 
   <!-- Include the script that enables Netlify Identity -->
-  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+  <script src="https://identity.netlify.com/v1/netlify-identity.js"></script>
   
 </head>
 <body>
+<script>
+netlifyIdentity.init({
+  APIUrl: "https://kbf2018.netlify.com/.netlify/identity"
+});
+</script>
   <!-- Include the script that builds the page and powers Netlify CMS -->
   <script src="https://unpkg.com/netlify-cms/dist/cms.js"></script>
 </body>

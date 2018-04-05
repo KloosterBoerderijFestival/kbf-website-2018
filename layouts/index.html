@@ -278,12 +278,12 @@
           <div class="col-md-12">
             <h1>Contact</h1>
             <p>Heb je een vraag of wil je ons gewoon een berichtje sturen? Dat kan via onderstaand formulier.</p>
-            <form method="POST" netlify>
+            <form name="contact" method="POST" netlify>
               <div class="form-group"> <label for="InputName">Naam</label>
-                <input type="text" class="form-control" id="InputName" placeholder="Naam"> </div>
+                <input type="text" name="Naam" class="form-control" placeholder="Naam"> </div>
               <div class="form-group"> <label for="InputEmail1">Email adres</label>
-                <input type="email" class="form-control" id="InputEmail1" placeholder="Email"> </div>
-              <div class="form-group"> <label for="Textarea">Bericht</label> <textarea class="form-control" id="Textarea" rows="3" placeholder="Schrijf hier je bericht"></textarea> </div>
+                <input type="email" class="form-control" name="Email" placeholder="Email"> </div>
+              <div class="form-group"> <label for="Textarea">Bericht</label> <textarea class="form-control" id="Bericht" rows="3" placeholder="Schrijf hier je bericht"></textarea> </div>
               <br>
               <button type="submit" class="btn btn-secondary">Versturen</button>
             </form>

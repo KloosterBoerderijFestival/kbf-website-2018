@@ -3,6 +3,6 @@ publish = "public"
 command = "hugo"
 
 [[headers]]
-  for = "/*"
+  for = "/.netlify/identity/*"
   [headers.values]
     Access-Control-Allow-Origin = "*"

@@ -56,7 +56,9 @@ class ExcelWriter
                     $this->activeSheet->setCellValueByColumnAndRow($i, 1, $headertext);
                 }
             } while ($header != $headertext);
-            $this->activeSheet->setCellValueByColumnAndRow($i, $this->currentRow, $_POST[$field->name]);
+            $value = $_POST[$field->name];
+            if (is_array($value)) $value = implode(',', $value);
+            $this->activeSheet->setCellValueByColumnAndRow($i, $this->currentRow, $value);
         }
     }
 

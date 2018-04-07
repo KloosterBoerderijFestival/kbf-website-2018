@@ -2,6 +2,7 @@
 title: 'Dag 6: Achter de boerderij'
 author: willem
 type: blog
+featured_image: https://www.kloosterboerderijfestival.nl/wp-content/uploads/2017/08/P8168788.jpg
 date: 2017-08-20T14:00:50+00:00
 
 ---

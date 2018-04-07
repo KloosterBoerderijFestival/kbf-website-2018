@@ -2,6 +2,7 @@
 title: 'Dag 7: Werken en vallen van de ladder van de zaligsprekingen'
 author: wilma
 type: blog
+featured_image: https://www.kloosterboerderijfestival.nl/wp-content/uploads/2017/08/P8178798.jpg
 date: 2017-08-28T10:54:13+00:00
 
 ---

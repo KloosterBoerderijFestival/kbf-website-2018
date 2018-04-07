@@ -3,7 +3,7 @@ title: 'Dag 4: Kunst en de geluksmachine'
 author: wilma
 type: blog
 date: 2016-07-24T18:23:17+00:00
-featured_image: /wp-content/uploads/2016/07/DSC04895-e1470305259639.jpg
+featured_image: https://kloosterboerderijfestival.nl/wp-content/uploads/2016/07/DSC04895-e1470305259639.jpg
 
 ---
 Een weekendgevoel hebben wij niet. Gewoon om 8 uur &#8217;s ochtends bidden, daarvoor brood bakken, &#8217;s ochtends op de boerderij werken en &#8217;s middags een spreker.

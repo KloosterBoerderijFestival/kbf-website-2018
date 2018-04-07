@@ -3,7 +3,7 @@ title: 'Dag 5: Liever een eerlijke prutser…'
 author: wilma
 type: blog
 date: 2017-08-19T20:32:59+00:00
-featured_image: /wp-content/uploads/2017/08/Ochtend-refter-1.jpg
+featured_image: https://kloosterboerderijfestival.nl/wp-content/uploads/2017/08/Ochtend-refter-1.jpg
 
 ---
 <figure id="attachment_2745" style="width: 300px" class="wp-caption alignright">[<img class="wp-image-2745 size-medium" src="http://www.kloosterboerderijfestival.nl/wp-content/uploads/2017/08/DSC08587-300x225.jpg" alt="" width="300" height="225" srcset="http://www.kloosterboerderijfestival.nl/wp-content/uploads/2017/08/DSC08587-300x225.jpg 300w, http://www.kloosterboerderijfestival.nl/wp-content/uploads/2017/08/DSC08587-768x576.jpg 768w, http://www.kloosterboerderijfestival.nl/wp-content/uploads/2017/08/DSC08587-785x589.jpg 785w, http://www.kloosterboerderijfestival.nl/wp-content/uploads/2017/08/DSC08587-600x450.jpg 600w, http://www.kloosterboerderijfestival.nl/wp-content/uploads/2017/08/DSC08587.jpg 1024w" sizes="(max-width: 300px) 100vw, 300px" />][1]<figcaption class="wp-caption-text">Saskia tijdens haar workshop in de bibliotheek</figcaption></figure> 

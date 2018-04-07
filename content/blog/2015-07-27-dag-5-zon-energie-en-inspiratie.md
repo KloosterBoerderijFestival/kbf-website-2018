@@ -3,7 +3,7 @@ title: 'Dag 5: Zon, energie en inspiratie'
 author: mattias
 type: blog
 date: 2015-07-27T08:55:03+00:00
-featured_image: /wp-content/uploads/2015/07/IMG_1288.jpg
+featured_image: https://kloosterboerderijfestival.nl/wp-content/uploads/2015/07/IMG_1288.jpg
 
 ---
 _Impressies van Anna Blomgren_

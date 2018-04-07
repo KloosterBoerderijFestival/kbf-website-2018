@@ -3,7 +3,7 @@ title: 'Dag 2, 3: Wat voor een wezen is een monnik'
 author: Eelke
 type: blog
 date: 2017-08-15T16:41:04+00:00
-featured_image: /wp-content/uploads/2017/08/P8138594.jpg
+featured_image: https://kloosterboerderijfestival.nl/wp-content/uploads/2017/08/P8138594.jpg
 
 ---
 <figure id="attachment_2702" style="width: 200px" class="wp-caption alignright">[<img class="wp-image-2702 size-medium" src="http://www.kloosterboerderijfestival.nl/wp-content/uploads/2017/08/IMG_7616-200x300.jpg" alt="" width="200" height="300" srcset="http://www.kloosterboerderijfestival.nl/wp-content/uploads/2017/08/IMG_7616-200x300.jpg 200w, http://www.kloosterboerderijfestival.nl/wp-content/uploads/2017/08/IMG_7616.jpg 455w" sizes="(max-width: 200px) 100vw, 200px" />][1]<figcaption class="wp-caption-text">Droominee Rik</figcaption></figure> 

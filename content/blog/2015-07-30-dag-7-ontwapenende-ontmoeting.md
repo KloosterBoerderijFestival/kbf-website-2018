@@ -3,7 +3,7 @@ title: 'Dag 7: Ontwapenende ontmoeting'
 author: wilma
 type: blog
 date: 2015-07-30T10:41:01+00:00
-featured_image: /wp-content/uploads/2015/07/P7274571.jpg
+featured_image: https://kloosterboerderijfestival.nl/wp-content/uploads/2015/07/P7274571.jpg
 
 ---
 _Door Renny_

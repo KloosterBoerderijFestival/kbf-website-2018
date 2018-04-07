@@ -3,7 +3,7 @@ title: 'Dag 6: God in de jungle, verhalen bij het kampvuur'
 author: wilma
 type: blog
 date: 2016-07-26T18:43:05+00:00
-featured_image: /wp-content/uploads/2016/07/IMG_6628-e1470305245318.jpg
+featured_image: https://kloosterboerderijfestival.nl/wp-content/uploads/2016/07/IMG_6628-e1470305245318.jpg
 
 ---
 Op deze wisselvallige maandagochtend staken we weer enthousiast de handen uit de mouwen. Versterkt met verse werkkrachten uit de stad gingen we hooien, straten en snoeien. Stukje bij beetje maken we de Eemlandhoeve mooier. De slootkant ziet er weer strak uit, en het pleintje is bijna klaar.

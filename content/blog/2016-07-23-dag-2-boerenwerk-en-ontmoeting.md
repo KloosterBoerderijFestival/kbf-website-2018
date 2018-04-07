@@ -3,7 +3,7 @@ title: 'Dag 2: Boerenwerk en ontmoeting'
 author: wilma
 type: blog
 date: 2016-07-23T08:12:26+00:00
-featured_image: /wp-content/uploads/2016/07/P7215757-e1470306214298.jpg
+featured_image: https://kloosterboerderijfestival.nl/wp-content/uploads/2016/07/P7215757-e1470306214298.jpg
 
 ---
 &nbsp;

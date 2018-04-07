@@ -3,7 +3,7 @@ title: Op zoek naar een locatie
 author: wilma
 type: blog
 date: 2017-04-21T12:10:49+00:00
-featured_image: /wp-content/uploads/2015/06/AbdijSion.jpg
+featured_image: https://kloosterboerderijfestival.nl/wp-content/uploads/2015/06/AbdijSion.jpg
 
 ---
 **Abdij Sion is het geworden! De locatie van het KloosterBoerderijFestival 2017.** 

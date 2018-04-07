@@ -3,7 +3,7 @@ title: 'Dag 1: In de voetsporen van monniken'
 author: wilma
 type: blog
 date: 2017-08-12T09:57:53+00:00
-featured_image: /wp-content/uploads/2017/08/Vrijdag-Fotograaf2.jpg
+featured_image: https://kloosterboerderijfestival.nl/wp-content/uploads/2017/08/Vrijdag-Fotograaf2.jpg
 
 ---
 Een paar jaar geleden liepen hier nog monniken door de gangen. Nu lopen wij er. In stilte, door het oude slotklooster. Het KloosterBoerderijFestival is begonnen! Vrijdag 11 augustus 2017, en het is echt. We hebben gegeten in de refter. Meegebeden met Nieuw Sion. Gekookt in de keuken waar niet zo lang geleden nog monniken kookten.

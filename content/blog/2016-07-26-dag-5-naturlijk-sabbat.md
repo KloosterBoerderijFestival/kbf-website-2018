@@ -3,7 +3,7 @@ title: 'Dag 5: Natuurlijke Sabbat'
 author: wilma
 type: blog
 date: 2016-07-26T16:29:13+00:00
-featured_image: /wp-content/uploads/2016/07/DSC04881-e1470304933597.jpg
+featured_image: https://kloosterboerderijfestival.nl/wp-content/uploads/2016/07/DSC04881-e1470304933597.jpg
 
 ---
 Zondag. Een dag waarop we uit konden slapen!

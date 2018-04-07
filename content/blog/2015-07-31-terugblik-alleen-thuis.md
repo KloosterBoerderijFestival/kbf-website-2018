@@ -3,7 +3,7 @@ title: 'Terugblik: alleen thuis'
 author: wilma
 type: blog
 date: 2015-07-31T12:44:59+00:00
-featured_image: /wp-content/uploads/2015/07/P7274580-e1438346459679.jpg
+featured_image: https://kloosterboerderijfestival.nl/wp-content/uploads/2015/07/P7274580-e1438346459679.jpg
 
 ---
 <p style="text-align: center;">

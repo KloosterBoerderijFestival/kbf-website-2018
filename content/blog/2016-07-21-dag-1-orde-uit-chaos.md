@@ -3,7 +3,7 @@ title: 'Dag 1: Orde uit Chaos'
 author: herman
 type: blog
 date: 2016-07-21T09:15:16+00:00
-featured_image: /wp-content/uploads/2016/07/DSC04664-e1470306578358.jpg
+featured_image: https://kloosterboerderijfestival.nl/wp-content/uploads/2016/07/DSC04664-e1470306578358.jpg
 
 ---
 In den beginne. Chaos. Geest over water enzo. En dan, aan het eind van de dag een ontkiemend festival. Wat een wonder.

@@ -3,7 +3,7 @@ title: KBF goes GLF
 author: wilma
 type: blog
 date: 2016-09-01T12:23:21+00:00
-featured_image: /wp-content/uploads/2016/09/IMG_7601.jpg
+featured_image: https://kloosterboerderijfestival.nl/wp-content/uploads/2016/09/IMG_7601.jpg
 
 ---
 Afgelopen weekend vond het [Graceland][1] festival plaats, en het kloosterboerderijfestival was uitgenodigd om daar aanwezig te zijn. We kregen een tent en een schaduwrijk hoekje aangewezen, en konden toen onze gang gaan. Met zijn zessen hebben we ‘Het Klooster’ gecreëerd.<figure id="attachment_2485" style="width: 785px" class="wp-caption alignnone">

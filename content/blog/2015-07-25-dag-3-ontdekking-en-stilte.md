@@ -3,7 +3,7 @@ title: 'Dag 3: Ontdekking en stilte'
 author: wilma
 type: blog
 date: 2015-07-25T10:10:18+00:00
-featured_image: /wp-content/uploads/2015/07/P7244514.jpg
+featured_image: https://kloosterboerderijfestival.nl/wp-content/uploads/2015/07/P7244514.jpg
 
 ---
 _Impressies van Leonardo_

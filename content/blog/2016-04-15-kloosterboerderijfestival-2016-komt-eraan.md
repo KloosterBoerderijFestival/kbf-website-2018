@@ -3,7 +3,7 @@ title: KloosterBoerderijFestival 2016 komt eraan!
 author: wilma
 type: blog
 date: 2016-04-15T12:05:43+00:00
-featured_image: /wp-content/uploads/2016/04/KBF2-1e-meeting-e1470306796711.jpg
+featured_image: https://kloosterboerderijfestival.nl/wp-content/uploads/2016/04/KBF2-1e-meeting-e1470306796711.jpg
 
 ---
 Spijkers met koppen slaan!  Dat hebben we afgelopen week gedaan. Vrijdag 8 april was de eerste team vergadering waarin we samen hebben gegeten, gepland, de taken hebben verdeeld, dromen gedroomd en praktisch nagedacht.

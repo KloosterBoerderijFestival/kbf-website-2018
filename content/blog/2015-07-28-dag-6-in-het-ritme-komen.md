@@ -3,7 +3,7 @@ title: 'Dag 6: In het ritme komen'
 author: mattias
 type: blog
 date: 2015-07-28T10:33:55+00:00
-featured_image: https://kloosterboerderijfestival.nl/wp-content/uploads/2015/07/P7264560-e1438079152476.jpg
+featured_image: https://www.kloosterboerderijfestival.nl/wp-content/uploads/2015/07/P7264560-e1438079152476.jpg
 
 ---
 _Door Gerrald_

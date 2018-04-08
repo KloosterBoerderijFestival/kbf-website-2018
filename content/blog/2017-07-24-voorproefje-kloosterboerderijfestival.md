@@ -3,7 +3,7 @@ title: Voorproefje kloosterBOERDERIJfestival
 author: wilma
 type: blog
 date: 2017-07-24T09:13:31+00:00
-featured_image: https://kloosterboerderijfestival.nl/wp-content/uploads/2017/07/In-het-hooi-bij-Ben.jpg
+featured_image: https://www.kloosterboerderijfestival.nl/wp-content/uploads/2017/07/In-het-hooi-bij-Ben.jpg
 
 ---
 Met een groepje enthousiastelingen gingen we een paar dagen bij Ben Barkema op het land werken. Het was een veelzijdig ‘midweekend’ (van wo-vr). Op woensdag kwamen de eerste mensen aan, op de fiets en met het OV, in de uitgestrekte polder van Flevoland. Bij een biertje vertelde Ben van alles over het ontstaan van de boerderij. Daarna gaf hij een rondleiding op de velden om zijn huis. Afgelopen jaren is hij steeds meer gaan doen met natuurbeheer op zijn land. Hij heeft nu een heel aantal bloemenstroken op zijn land, en er zitten heel veel vlinders op.

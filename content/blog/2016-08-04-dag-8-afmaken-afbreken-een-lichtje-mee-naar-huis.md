@@ -3,7 +3,7 @@ title: 'Dag 8: Afmaken & afbreken. Een lichtje mee naar huis.'
 author: wilma
 type: blog
 date: 2016-08-04T11:10:20+00:00
-featured_image: https://kloosterboerderijfestival.nl/wp-content/uploads/2016/08/IMG_6517-e1470308366543.jpg
+featured_image: https://www.kloosterboerderijfestival.nl/wp-content/uploads/2016/08/IMG_6517-e1470308366543.jpg
 
 ---
 Afgelopen week was het alweer de laatste dag van het KloosterBoerderijFestival.

@@ -3,7 +3,7 @@ title: 'Dag 2: Creativiteit en Taizé'
 author: wilma
 type: blog
 date: 2015-07-24T08:55:30+00:00
-featured_image: https://kloosterboerderijfestival.nl/wp-content/uploads/2015/07/P7234476.jpg
+featured_image: https://www.kloosterboerderijfestival.nl/wp-content/uploads/2015/07/P7234476.jpg
 
 ---
 De eerste 24 uur, wennen aan een ritme van bidden, werken, eten. Taizé vieringen, mooie zonsondergangen, vieren dat we de subsidie van Kerk & Wereld hebben gekregen, gemeenschappelijke maaltijden, internationale gasten 🙂<figure id="attachment_2027" style="width: 300px" class="wp-caption alignnone">

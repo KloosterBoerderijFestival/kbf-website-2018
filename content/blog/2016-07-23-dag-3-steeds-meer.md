@@ -3,7 +3,7 @@ title: 'Dag 3: Steeds meer…'
 author: herman
 type: blog
 date: 2016-07-23T11:20:50+00:00
-featured_image: https://kloosterboerderijfestival.nl/wp-content/uploads/2016/07/werk-begin1-e1470306075852.jpg
+featured_image: https://www.kloosterboerderijfestival.nl/wp-content/uploads/2016/07/werk-begin1-e1470306075852.jpg
 
 ---
 Kijk ze eens gaan, de vrouwen en mannen van het KloosterBoerderijFestival! Na een ochtendgebed en ontbijt beginnen ze weer aan het werk op de boerderij. Er wordt gemaaid, gehakt, gegraven en enorm veel onkruid gewied.

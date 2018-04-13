@@ -12,6 +12,7 @@
       </div>
       <div class="row">
       {{ range .Params.gallery}}
+        <img src="{{ .image }}" />
         <div class="col-md-3 col-6 p-1">
           <a href="{{ .image }}" data-sub-html="<h4>{{ .caption }}</h4>">
             <img src="{{ replace .image "/images/uploads" "/images/uploads/thumbnails"}}" />

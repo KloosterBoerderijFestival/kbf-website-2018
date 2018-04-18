@@ -1,0 +1,65 @@
+    <!-- Footer -->
+    <footer class="text-md-left text-center p-4 bg-dark text-light">
+      <div class="container">
+        <div class="row">
+          <div class="my-3 col-lg-4 col-md-6">
+            <h3>KloosterBoerderijFestival</h3>
+            <p class="text-muted">10 - 17 augustus 2018</p>
+            <p class="my-3">Nieuw Sion
+              <br>Vulikerweg 6
+              <br>Diepenveen (bij Deventer)</p>
+            <p class="text-muted">info<span id="dummy">REMOVE</span>@klooster<span id="dummy">REMOVE</span>boerderijfestival<span id="dummy">REMOVE</span>.nl</p>  
+            <a class="btn btn-lg btn-primary" href="#register">Meld je nu aan!</a>
+          </div>
+          <div class="my-3 col-lg-4 col-md-6">
+            <a href="https://www.thegreenwebfoundation.org/directory/#9" target="blank">
+              <img src="https://api.thegreenwebfoundation.org/greencheckimage/2018.kloosterboerderijfestival.nl" alt="This website is hosted Green - checked by thegreenwebfoundation.org"> </a>
+          </div>
+          <div class="col-lg-1"> </div>
+          <div class="my-3 col-lg-3">
+            <a href="https://www.facebook.com/kloosterboerderijfestival/" target="blank"><i class="fab fa-facebook-square text-muted fa-3x m-2"></i></a>
+            <a href="https://github.com/KloosterBoerderijFestival/kbf-website-2018" target="blank"><i class="fab fa-github-square text-muted fa-3x m-2"></i></a>         
+            {{ if .RSSLink }}
+            <a href="{{ .RSSLink }}" target="blank"><i class="fa fa-rss-square text-muted fa-3x m-2"></i></a>
+            {{ end }}
+            <a href="https://travis-ci.org/KloosterBoerderijFestival/kbf-website-2018/" target="_blank">
+              <img src="https://travis-ci.org/KloosterBoerderijFestival/kbf-website-2018.svg?branch=master"></a>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <p class="text-muted">© Copyright 2018 KloosterBoerderijFestival</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- JavaScript dependencies -->
+    <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <!-- Script: Smooth scrolling between anchors in the same page -->
+    <script src="js/smooth-scroll.js"></script>
+
+{{ partial "piwik.html" . }}
+
+<script>
+netlifyIdentity.init({
+  APIUrl: "https://kbf2018.netlify.com/.netlify/identity"
+});
+</script>
+
+<script>
+  if (window.netlifyIdentity) {
+    window.netlifyIdentity.on("init", user => {
+      if (!user) {
+        window.netlifyIdentity.on("login", () => {
+          document.location.href = "/admin/";
+        });
+      }
+    });
+  }
+</script>
+
+</body>
+
+</html>

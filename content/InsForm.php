@@ -16,7 +16,7 @@ class InsForm
             $fieldset->display();
         }
 
-        echo '<input type="Submit"></form>';
+        echo '<input type="Submit" value="Verzenden"></form>';
     }
 
     function getAllFields()
@@ -97,7 +97,7 @@ class InsField
         if ($this->required) {
             $in = '<em>*</em>';
         }
-        echo '<tr><td><label for="' . $this->name . '">' . $this->title . $in . ':</label></td><td> ' . $this->getFormField() . '</td></tr>' . "\r\n";
+        echo '<tr><td width="500em;"><label for="' . $this->name . '">' . $this->title . $in . ':</label></td><td> ' . $this->getFormField() . '</td></tr>' . "\r\n";
     }
 
     function getFormField()
@@ -145,8 +145,8 @@ class InsYesNoField extends InsField
         $yesselected = $_POST[$this->name] == 'Ja' ? 'selected="selected"' : '';
         $noselected = $_POST[$this->name] == 'Nee' ? 'selected="selected"' : '';
         return '<select name="' . $this->name . '"><option value="">Selecteer &eacute;&eacute;n</option>'
-            . '<option value="Ja" '.$yesselected.'> Ja</option>'
-            . '<option value="Nee" '.$noselected.'> Nee</option>'
+            . '<option value="Ja" ' . $yesselected . '> Ja</option>'
+            . '<option value="Nee" ' . $noselected . '> Nee</option>'
             . '</select>';
 
     }

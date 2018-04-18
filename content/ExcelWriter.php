@@ -5,6 +5,7 @@
  * # composer require phpoffice/phpspreadsheet
  * (in the current directory)
  */
+
 require 'vendor/autoload.php';
 
 use PhpOffice\PhpSpreadsheet\Spreadsheet;
@@ -49,7 +50,6 @@ class ExcelWriter
             $headertext = $field->title;
             do {
                 $i++;
-                echo $i;
                 $header = $this->activeSheet->getCellByColumnAndRow($i, 1);
                 if ($header == '') {
                     $header = $headertext;

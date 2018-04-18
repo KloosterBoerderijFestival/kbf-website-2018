@@ -27,6 +27,15 @@ class InsForm
         }
         return $fields;
     }
+
+    public function validate()
+    {
+        $ret = '';
+        foreach ($this->fieldsets as $fieldset) {
+            $ret .= $fieldset->validate();
+        }
+        return $ret;
+    }
 }
 
 class InsFieldSet
@@ -56,6 +65,15 @@ class InsFieldSet
 
         echo "</table></fieldset>\r\n";
     }
+
+    public function validate()
+    {
+        $ret = '';
+        foreach ($this->fields as $field) {
+            $ret .= $field->validate();
+        }
+        return $ret;
+    }
 }
 
 class InsField
@@ -84,9 +102,39 @@ class InsField
 
     function getFormField()
     {
-        return '<input type="text" name="' . $this->name . '" value="" size="' . $this->size .'"/>';
+        return '<input type="text" name="' . $this->name . '" value="' . $_POST[$this->name] . '" size="' . $this->size . '"/>';
     }
 
+    function validate()
+    {
+        if ($this->required && $_POST[$this->name] == '' or is_null($_POST[$this->name])) {
+            return 'Je hebt de vraag "' . $this->title . '" niet ingevuld, maar het veld is wel verplicht.' . "<br />\r\n";
+        }
+        return "";
+    }
+
+}
+
+class InsEmailField extends InsField
+{
+    function validate()
+    {
+        if (!filter_var($_POST[$this->name], FILTER_VALIDATE_EMAIL)) {
+            return 'Het lijkt erop dat je geen geldig e-mailadres hebt ingevuld (' . $_POST[$this->name] . '). Kun je het nog eens proberen?' . "<br />\r\n";
+        }
+        return "";
+    }
+}
+
+class InsCaptchaField extends InsField
+{
+    function validate()
+    {
+        if (!in_array(strtolower($_POST[$this->name]), array('6', '9', 'zes', 'negen'))) {
+            return "Je hebt de supergeheime vraag aan het eind niet goed ingevuld. Probeer het nog eens.<br />\r\n";
+        }
+        return "";
+    }
 }
 
 class InsYesNoField extends InsField
@@ -94,7 +142,13 @@ class InsYesNoField extends InsField
 
     function getFormField()
     {
-        return '<select name="' . $this->name . '"><option value="">Selecteer &eacute;&eacute;n</option><option value="Ja"> Ja</option><option value="Nee"> Nee</option></select>';
+        $yesselected = $_POST[$this->name] == 'Ja' ? 'selected="selected"' : '';
+        $noselected = $_POST[$this->name] == 'Nee' ? 'selected="selected"' : '';
+        return '<select name="' . $this->name . '"><option value="">Selecteer &eacute;&eacute;n</option>'
+            . '<option value="Ja" '.$yesselected.'> Ja</option>'
+            . '<option value="Nee" '.$noselected.'> Nee</option>'
+            . '</select>';
+
     }
 }
 
@@ -137,9 +191,13 @@ class InsDateSelectField extends InsField
 
     private function getCheckItem($short, $long)
     {
+        $checked = '';
+        if (in_array($short, $_POST['welkedagen'])) {
+            $checked = ' checked';
+        }
         $ret2 = '';
         $ret2 .= '<li>';
-        $ret2 .= '<input name="' . $this->name . '[]" type="checkbox" value="' . $short . '">';
+        $ret2 .= '<input name="' . $this->name . '[]" type="checkbox" value="' . $short . '" ' . $checked . '>';
         $ret2 .= '<span>' . $long . '</span>';
         $ret2 .= '</li>' . "\r\n";
         return $ret2;

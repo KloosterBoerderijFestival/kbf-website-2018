@@ -1,7 +1,7 @@
 backend:
   name: git-gateway
-  identity_url: "https://heuristic-tereshkova-e8643d.netlify.com/.netlify/identity"
-  gateway_url: "https://heuristic-tereshkova-e8643d.netlify.com/.netlify/git/github"
+  identity_url: "https://kbf2018.netlify.com/.netlify/identity"
+  gateway_url: "https://kbf2018.netlify.com/.netlify/git/github"
   accept_roles: #optional - accepts all users if left out
     - admin
     - editor
@@ -18,19 +18,10 @@ collections: # A list of collections the CMS should be able to edit
     create: true # Allow users to create new documents in this collection
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields: # The fields each document in this collection have
-      - {label: Date/Time, name: date, widget: datetime, format: YYYY-MM-DD hh:mm:ss}
+      - {label: Date/Time, name: date, widget: datetime}
       - {label: Post Title, name: title, widget: string}
       - {label: Content, name: body, widget: markdown}
-      - {label: Author, name: author, widget: relation, collection: authors, searchFields: ["first_name", "last_name"], valueField: "title"}
-
-  - name: page # Used in routes, ie.: /admin/collections/:slug/edit
-    label: Pages # Used in the UI, ie.: New Post
-    folder: content # The path to the folder where the documents are stored
-    create: true # Allow users to create new documents in this collection
-    slug: "{{slug}}"
-    fields: # The fields each document in this collection have
-      - {label: Page Title, name: title, widget: string}
-      - {label: Content, name: body, widget: markdown}
+      - {label: Gallery, name: gallery, widget: list, required: false, fields: [{label: Image, name: image, widget: image}, {label: Caption, name: caption, widget: text}]}
 
   - name: settings # Used in routes, ie.: /admin/collections/:slug/edit
     label: Settings
@@ -42,23 +33,3 @@ collections: # A list of collections the CMS should be able to edit
         name: site
         fields:
           - {label: Site Title, name: title, widget: string}
-          - {label: Items Per Page, name: paginate, widget: number}
-
-  - name: "pages"
-    label: "More Pages"
-    files:
-      - file: "content/products.md"
-        label: "Products Page"
-        name: "products"
-        fields:
-          - {label: Title, name: title, widget: string}
-          - {label: Type, name: type, widget: hidden, default: products}
-          - {label: Page, name: page, widget: hidden, default: "/products.html"}
-          - {label: Image, name: image, widget: image}
-          - {label: Heading, name: heading, widget: string}
-          - {label: Description, name: description, widget: string}
-          - {label: Intro, name: intro, widget: object, fields: [{label: Heading, name: heading, widget: string}, {label: Description, name: description, widget: text}, {label: Blurbs, name: blurbs, widget: list, fields: [{label: Image, name: image, widget: image}, {label: Text, name: text, widget: text}]}]}
-          - {label: Main, name: main, widget: object, fields: [{label: Heading, name: heading, widget: string}, {label: Description, name: description, widget: text}, {label: Image1, name: image1, widget: object, fields: [{label: Image, name: image, widget: image}, {label: Alt, name: alt, widget: string}]}, {label: Image2, name: image2, widget: object, fields: [{label: Image, name: image, widget: image}, {label: Alt, name: alt, widget: string}]}, {label: Image3, name: image3, widget: object, fields: [{label: Image, name: image, widget: image}, {label: Alt, name: alt, widget: string}]}]}
-          - {label: Testimonials, name: testimonials, widget: list, fields: [{label: Quote, name: quote, widget: string}, {label: Author, name: author, widget: string}]}
-          - {label: Full_image, name: full_image, widget: image}
-          - {label: Pricing, name: pricing, widget: object, fields: [{label: Heading, name: heading, widget: string}, {label: Description, name: description, widget: string}, {label: Plans, name: plans, widget: list, fields: [{label: Plan, name: plan, widget: string}, {label: Price, name: price, widget: string}, {label: Description, name: description, widget: string}, {label: Items, name: items, widget: list}]}]}

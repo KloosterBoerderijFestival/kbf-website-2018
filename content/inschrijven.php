@@ -1,6 +1,6 @@
 <?php
 
-echo file_get_contents('partials/header.html');
+echo file_get_contents('phpincludes/header/index.html');
 echo "<div class=\"container\"><div class='row'><div class=\"col-md-12\"><p>";
 echo "<h1>DEZE TEKST VALT WEG ONDER DE HEADER EN IK HEB GEEN FLAUW BENUL WAAROM</h1>";
 
@@ -68,5 +68,5 @@ if (count($_POST) > ARBITRARY_CONSTANT_HIGH_ENOUGH_TO_ENSURE_PROPER_INPUT) {
     $form->display();
 }
 echo "<br /></p></div></div></div>";
-echo file_get_contents('partials/footer.html');
+echo file_get_contents('phpincludes/footer/index.html');
 ?>

@@ -1,13 +1,15 @@
 <?php
 
-$template = file_get_contents('inschrijfdummy.tmpl');
+require_once('settings.php');
+/* Example settings file:
+<?php
+    const FILE_SAVE_PATH = "/var/www/opslag/";
+?>
+ */
+
+$template = file_get_contents('inschrijfdummy.tmpl'); // Generated from md in blog by hugo
 list($header, $footer) = explode('<p>PLEKJEVASTHOUDER</p>', $template);
-
 echo $header;
-
-//echo file_get_contents('phpincludes/header.inc');
-//echo "<div class=\"container\"><div class='row'><div class=\"col-md-12\"><p>";
-//echo "<h1>DEZE TEKST VALT WEG ONDER DE HEADER EN IK HEB GEEN FLAUW BENUL WAAROM</h1>";
 
 const ARBITRARY_CONSTANT_HIGH_ENOUGH_TO_ENSURE_PROPER_INPUT = 3;
 
@@ -49,14 +51,15 @@ if (count($_POST) > ARBITRARY_CONSTANT_HIGH_ENOUGH_TO_ENSURE_PROPER_INPUT) {
     $errors = $form->validate();
     if ($errors == "") {
         try {
-            $textWriter = new TextWriter("opslag/");
+            $textWriter = new TextWriter(FILE_SAVE_PATH);
             $textWriter->fillRow($form->getAllFields(), $_POST['fname'] . ' ' . $_POST['lname']);
 
-            $excelWriter = new ExcelWriter("opslag/inschrijvingen.xlsx");
+            $excelWriter = new ExcelWriter(FILE_SAVE_PATH . "inschrijvingen.xlsx");
             $excelWriter->fillRow($form->getAllFields());
             $excelWriter->saveSpreadSheet();
         } catch (Exception $e) {
-            die('<span style="color: red; "><b>Er is iets mis gegaan met je inschrijving! Something went wrong!</b></span>');
+            echo '<span style="color: red; "><b>Er is iets mis gegaan met je inschrijving! Something went wrong!</b></span>';
+            throw $e;
         }
         ?>
         <b>Bedankt voor je inschrijving! Hij is binnen. :)</b><b/>

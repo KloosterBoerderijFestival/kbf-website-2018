@@ -23,10 +23,13 @@ class ExcelWriter
     function __construct($filename)
     {
         $this->filename = $filename;
-        $reader = new \PhpOffice\PhpSpreadsheet\Reader\Xlsx();
-        $this->spreadsheet = $reader->load($this->filename);
+        if (file_exists($this->filename)) {
+            $reader = new \PhpOffice\PhpSpreadsheet\Reader\Xlsx();
+            $this->spreadsheet = $reader->load($this->filename);
+        } else {
+            $this->spreadsheet = new \PhpOffice\PhpSpreadsheet\Spreadsheet();
+        }
         $this->activeSheet = $this->spreadsheet->getActiveSheet();
-
         $this->currentRow = $this->findRowNumber($this->activeSheet);
     }
 

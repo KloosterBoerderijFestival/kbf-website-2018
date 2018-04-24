@@ -1,8 +1,13 @@
 <?php
 
-echo file_get_contents('phpincludes/header/index.html');
-echo "<div class=\"container\"><div class='row'><div class=\"col-md-12\"><p>";
-echo "<h1>DEZE TEKST VALT WEG ONDER DE HEADER EN IK HEB GEEN FLAUW BENUL WAAROM</h1>";
+$template = file_get_contents('inschrijfdummy.tmpl');
+list($header, $footer) = explode('<p>PLEKJEVASTHOUDER</p>', $template);
+
+echo $header;
+
+//echo file_get_contents('phpincludes/header.inc');
+//echo "<div class=\"container\"><div class='row'><div class=\"col-md-12\"><p>";
+//echo "<h1>DEZE TEKST VALT WEG ONDER DE HEADER EN IK HEB GEEN FLAUW BENUL WAAROM</h1>";
 
 const ARBITRARY_CONSTANT_HIGH_ENOUGH_TO_ENSURE_PROPER_INPUT = 3;
 
@@ -67,6 +72,6 @@ if (count($_POST) > ARBITRARY_CONSTANT_HIGH_ENOUGH_TO_ENSURE_PROPER_INPUT) {
 } else {
     $form->display();
 }
-echo "<br /></p></div></div></div>";
-echo file_get_contents('phpincludes/footer/index.html');
+//echo file_get_contents('phpincludes/footer.inc');
+echo $footer;
 ?>

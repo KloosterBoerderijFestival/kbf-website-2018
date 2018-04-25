@@ -1,0 +1,11 @@
+<div class="gallery">
+{{ with .Resources.GetMatch "header" }}
+  {{ $scaled := .Resize "256x q80" }}
+  <div class="gallery-item">
+    <a href="{{ .RelPermalink }}">
+    <img class="thumbnail" src="{{ $scaled.Permalink }}">
+  </a>
+  </div>
+{{ end }}
+</div>
+

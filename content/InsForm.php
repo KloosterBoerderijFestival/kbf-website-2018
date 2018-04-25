@@ -28,6 +28,27 @@ class InsForm
         return $fields;
     }
 
+    public function getAllFieldValues()
+    {
+        $fieldValues = array();
+        foreach ($this->getAllFields() as $field) {
+            $value = $_POST[$field->name];
+            if (is_array($value)) $value = implode(',', $value);
+            $fieldValues[$field->title] = $value;
+        }
+        return $fieldValues;
+    }
+
+    public function getFormattedFieldValues()
+    {
+        $ret = '';
+        foreach ($this->getAllFieldValues() as $field => $value) {
+            $ret .= "<span style='font-weight: bold;'>" . $field . "</span><br />\r\n" . $value . "<br /><br />\r\n\r\n";
+        }
+        return $ret;
+    }
+
+
     public function validate()
     {
         $ret = '';

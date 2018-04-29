@@ -1,17 +1,17 @@
-<! Save the current page in a variable -->
+<!-- Save the current page in a variable -->
 {{ $page := . }}
-<! Change the page to the image location -->
+<!-- Change the page to the image location -->
 {{ with .Site.GetPage "page" "images" }}
   {{ $resources := .Resources.Match "**" }}
 
-<! Remove the prefixed path from the gallery items in the frontmatter. -->
+<!-- Remove the prefixed path from the gallery items in the frontmatter. -->
   {{ range $page.Params.gallery }}
     {{ with . }}
       {{ $.Scratch.Add "gallery" (slice (strings.TrimPrefix "/images/" .image)) }}
     {{ end }}
   {{ end }}
 
-<! Select only the images that are listed in the frontmatter -->
+<!-- Select only the images that are listed in the frontmatter -->
   {{ range where $resources ".Name" "in" ($.Scratch.Get "gallery") }}
     {{ $image200x := (.Resize "200x") }}
     {{ $image400x := (.Resize "400x") }}

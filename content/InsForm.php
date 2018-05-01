@@ -48,6 +48,15 @@ class InsForm
         return $ret;
     }
 
+    public function getPlainFieldValues()
+    {
+        $ret = '';
+        foreach ($this->getAllFieldValues() as $field => $value) {
+            $ret .= $field . ": \r\n" . $value . "\r\n\r\n";
+        }
+        return $ret;
+    }
+
 
     public function validate()
     {

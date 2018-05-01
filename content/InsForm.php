@@ -87,13 +87,11 @@ class InsFieldSet
     {
 
         echo "<fieldset><h4>" . $this->title . "</h4>\r\n";
-        echo "<table border='0'>\r\n";
 
         foreach ($this->fields as $field) {
             $field->display();
         }
 
-        echo "</table></fieldset>\r\n";
     }
 
     public function validate()
@@ -127,12 +125,12 @@ class InsField
         if ($this->required) {
             $in = '<em>*</em>';
         }
-        echo '<tr><td width="500em;"><label for="' . $this->name . '">' . $this->title . $in . ':</label></td><td> ' . $this->getFormField() . '</td></tr>' . "\r\n";
+        echo '<div><label for="' . $this->name . '">' . $this->title . $in . ':</label></div><div> ' . $this->getFormField() . '</div><br />' . "\r\n";
     }
 
     function getFormField()
     {
-        return '<input type="text" name="' . $this->name . '" value="' . $_POST[$this->name] . '" size="' . $this->size . '"/>';
+        return '<input type="text" id="'.$this->name.'" name="' . $this->name . '" value="' . $_POST[$this->name] . '" size="' . $this->size . '"/>';
     }
 
     function validate()
@@ -227,8 +225,8 @@ class InsDateSelectField extends InsField
         }
         $ret2 = '';
         $ret2 .= '<li>';
-        $ret2 .= '<input name="' . $this->name . '[]" type="checkbox" value="' . $short . '" ' . $checked . '>';
-        $ret2 .= '<span>' . $long . '</span>';
+        $ret2 .= '<input name="' . $this->name . '[]" type="checkbox" value="' . $short . '" id="'.$short.'"" ' . $checked . ' />';
+        $ret2 .= '<label for="'.$short.'">' . $long . '</label>';
         $ret2 .= '</li>' . "\r\n";
         return $ret2;
     }

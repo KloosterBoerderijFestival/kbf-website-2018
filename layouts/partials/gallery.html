@@ -3,7 +3,7 @@
     <div class="container">
       <div class="row">
         <div class="col-md-12">
-          <h1 class="mb-4 text-white" contenteditable="true">Best pictures</h1>
+          <h1 class="mb-4 text-white" contenteditable="true">Gallery</h1>
         </div>
       </div>
       <div class="row">
@@ -23,7 +23,6 @@
         <!-- Select only the images that are listed in the frontmatter -->
         {{ range where $resources ".Name" "in" ($.Scratch.Get "gallery") }}
           {{ $image200x := (.Resize "200x") }}
-          <img src="{{ $image200x.RelPermalink }}" />
           <div class="col-md-3 col-6 p-1">
             <a href="{{ $image200x.RelPermalink }}" data-sub-html="<h4>{{ $image200x.RelPermalink }}</h4>">
             <img src="{{ $image200x.RelPermalink }}" />

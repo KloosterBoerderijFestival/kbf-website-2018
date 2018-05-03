@@ -16,6 +16,7 @@ const ARBITRARY_CONSTANT_HIGH_ENOUGH_TO_ENSURE_PROPER_INPUT = 3;
 require_once('ExcelWriter.php');
 require_once('TextWriter.php');
 require_once('InsForm.php');
+require_once('Mailer.php');
 
 $form = new InsForm();
 $persInf = new InsFieldSet();
@@ -66,6 +67,9 @@ if (count($_POST) > ARBITRARY_CONSTANT_HIGH_ENOUGH_TO_ENSURE_PROPER_INPUT) {
         <?php
         echo $form->getFormattedFieldValues();
         echo "<br />Foutje gemaakt? Vragen? Mail via het hieronder genoemde e-mailadres.";
+        $message = $form->getPlainFieldValues();
+        $mailer = new Mailer('Kloosterboerderijfestival', 'info@kloosterboerderijfestival.nl', $_POST['email'], $message);
+        $mailer->send();
     } else {
         echo "<span style=\"color: red; \">Niet alle velden zijn goed ingevuld:<br />\r\n";
         echo $errors;

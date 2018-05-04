@@ -11,11 +11,9 @@ use PhpOffice\PhpSpreadsheet\Writer\Xlsx;
 
 class ExcelWriter
 {
-    var $spreadsheet;
+    private $spreadsheet;
     private $filename;
-
     private $activeSheet;
-
     private $currentRow;
 
     function __construct($filename)
@@ -46,20 +44,9 @@ class ExcelWriter
 
     public function fillRow($fields)
     {
-        $i = 0;
-        foreach ($fields as $field) {
-            $headertext = $field->title;
-            do {
-                $i++;
-                $header = $this->activeSheet->getCellByColumnAndRow($i, 1);
-                if ($header == '') {
-                    $header = $headertext;
-                    $this->activeSheet->setCellValueByColumnAndRow($i, 1, $headertext);
-                }
-            } while ($header != $headertext);
-            $value = $_POST[$field->name];
-            if (is_array($value)) $value = implode(',', $value);
-            $this->activeSheet->setCellValueByColumnAndRow($i, $this->currentRow, $value);
+        foreach ($fields as $headertext => $value) {
+            $col = $this->getColumn($headertext);
+            $this->activeSheet->setCellValueByColumnAndRow($col, $this->currentRow, $value);
         }
     }
 
@@ -67,5 +54,33 @@ class ExcelWriter
     {
         $writer = new Xlsx($this->spreadsheet);
         $writer->save($this->filename);
+    }
+
+    public function hasDuplicates($fieldname, $fields)
+    {
+        if($this->currentRow > 2) {
+            $col = $this->getColumn($fieldname);
+            for ($row = 0; $row < $this->currentRow; $row++) {
+                $rowvalue = $this->activeSheet->getCellByColumnAndRow($col, $row)->getValue();
+                if($rowvalue == $fields[$fieldname]) {
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
+
+    private function getColumn($headertext)
+    {
+        $i = 0;
+        do {
+            $i++;
+            $header = $this->activeSheet->getCellByColumnAndRow($i, 1);
+            if ($header == '') {
+                $header = $headertext;
+                $this->activeSheet->setCellValueByColumnAndRow($i, 1, $headertext);
+            }
+        } while ($header != $headertext);
+        return $i;
     }
 }

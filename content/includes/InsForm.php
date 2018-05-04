@@ -34,6 +34,7 @@ class InsForm
         foreach ($this->getAllFields() as $field) {
             $value = $_POST[$field->name];
             if (is_array($value)) $value = implode(',', $value);
+            $value = trim($value);
             $fieldValues[$field->title] = $value;
         }
         return $fieldValues;

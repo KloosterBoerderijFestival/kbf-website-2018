@@ -58,7 +58,7 @@ class ExcelWriter
 
     public function hasDuplicates($fieldname, $fields)
     {
-        if($this->currentRow > 2) {
+        if($this->currentRow > 2) { // row > 2 means we have an inschrijving
             $col = $this->getColumn($fieldname);
             for ($row = 0; $row < $this->currentRow; $row++) {
                 $rowvalue = $this->activeSheet->getCellByColumnAndRow($col, $row)->getValue();

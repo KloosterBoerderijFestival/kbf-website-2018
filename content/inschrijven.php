@@ -63,7 +63,7 @@ if (count($_POST) > ARBITRARY_CONSTANT_HIGH_ENOUGH_TO_ENSURE_PROPER_INPUT) {
 
             $excelWriter = new ExcelWriter(FILE_SAVE_PATH . "inschrijvingen.xlsx");
             $hasDuplicates = $excelWriter->hasDuplicates('Email', $form->getAllFieldValues());
-            if($hasDuplicates) { // TODO test met lege inschrijvingen.xlsx
+            if($hasDuplicates) {
                 ?>Paniek! Het lijkt erop dat je je al eerder hebt aangemeld met dit e-mailadres. Je inschrijving is <span style="font-weight: bold;">niet</span> opgeslagen.<br />
                 Stuur ons even een mailtje via het hieronder genoemde adres als je denkt dat het niet klopt.
                 <?php

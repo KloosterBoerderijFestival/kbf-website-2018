@@ -35,8 +35,9 @@
 -->
 
          {{ $thumbnail := .Resize "320x" }}
+         {{ $fullsize := .Resize "800x" }}
          <figure itemscope itemtype="http://schema.org/ImageObject" class="image gallery-item">
-           <a href="{{ .Permalink }}" itemprop="contentUrl" data-size="{{ .Width }}x{{ .Height }}">
+           <a href="{{ $fullsize.Permalink }}" itemprop="contentUrl" data-size="{{ $fullsize.Width }}x{{ $fullsize.Height }}">
              <img src="{{ $thumbnail.Permalink }}" itemprop="thumbnail" alt="galleryImage" />
            </a>
 

@@ -1,0 +1,12 @@
+Hoi %naam%,
+
+Dankjewel voor je inschrijving voor het kloosterboerderijfestival!
+
+Je inschrijving is definitief als het geld is overgemaakt.
+Ons rekeningnummer is: NL69 TRIO 0390 9403 21, t.n.v. de Kloosterboeren.
+
+Je heb je als volgt ingeschreven:
+%inschrijvingsdetails%
+
+Groetjes,
+Het team

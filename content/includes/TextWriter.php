@@ -13,11 +13,9 @@ class TextWriter
     {
         $filename = preg_replace("/[^A-Za-z\s]+/", "", $name) . '_' . date('Y-M-d-H-i-s') . '.txt';
         $ret = '';
-        foreach ($fields as $field) {
+        foreach ($fields as $title => $value) {
 
-            $value = $_POST[$field->name];
-            if (is_array($value)) $value = implode(',', $value);
-            $ret .= $field->title . ': ' . $value. "\r\n";
+            $ret .= $title . ': ' . $value. "\r\n";
         }
         if (file_put_contents($this->path . $filename, $ret) === false) {
             throw new Exception("Cannot create file");

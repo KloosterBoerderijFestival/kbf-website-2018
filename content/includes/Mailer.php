@@ -4,19 +4,23 @@ class Mailer
 {
     private $from_name;
     private $mail_to;
+    private $to_name;
     private $mail_subject;
-    private $mail_message;
+    private $template;
+    private $mail_details;
     private $from_mail;
     private $encoding;
     private $subject_preferences;
 
-    function __construct($from_name, $from_mail, $mail_to, $subject, $mail_message)
+    function __construct($from_name, $from_mail, $mail_to, $to_name, $subject, $template, $mail_details)
     {
         $this->from_mail = $from_mail;
         $this->from_name = $from_name;
         $this->mail_to = $mail_to;
+        $this->to_name = $to_name;
         $this->mail_subject = $subject;
-        $this->mail_message = $mail_message;
+        $this->mail_details = $mail_details;
+        $this->template = $template;
 
         $this->encoding = "utf-8";
         $this->subject_preferences = array(
@@ -41,7 +45,12 @@ class Mailer
     function send()
     {
         $header = $this->createHeader();
-        mail($this->mail_to, $this->mail_subject, $this->mail_message, $header);
+
+        $message = $this->template;
+        $message = str_replace(array("\r\n", "\r", "\n"), "<br />\r\n", $message);
+        $message = str_replace('%naam%', $this->to_name, $message);
+        $message = str_replace('%inschrijvingsdetails%', $this->mail_details, $message);
+        mail($this->mail_to, $this->mail_subject, $message, $header);
     }
 }
 

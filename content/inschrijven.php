@@ -7,16 +7,17 @@ require_once('settings.php');
 ?>
  */
 
-$template = file_get_contents('inschrijfdummy.tmpl'); // Generated from md in blog by hugo
+$template = file_get_contents('includes/inschrijfdummy.tmpl'); // Generated from md in blog by hugo
 list($header, $footer) = explode('<p>PLEKJEVASTHOUDER</p>', $template);
 echo $header;
 
 const ARBITRARY_CONSTANT_HIGH_ENOUGH_TO_ENSURE_PROPER_INPUT = 3;
 
-require_once('ExcelWriter.php');
-require_once('TextWriter.php');
-require_once('InsForm.php');
-require_once('Mailer.php');
+require_once('vendor/autoload.php');
+require_once('includes/ExcelWriter.php');
+require_once('includes/TextWriter.php');
+require_once('includes/InsForm.php');
+require_once('includes/Mailer.php');
 
 $form = new InsForm();
 $persInf = new InsFieldSet();
@@ -48,38 +49,58 @@ $nogMeer->addField(new InsCaptchaField('Hoeveel is drie maal drie (mag ook als P
 
 $form->addFieldset($nogMeer);
 
+$hasDuplicates = false;
+
 if (count($_POST) > ARBITRARY_CONSTANT_HIGH_ENOUGH_TO_ENSURE_PROPER_INPUT) {
     $errors = $form->validate();
     if ($errors == "") {
+        $name = $_POST['fname'] . ' ' . $_POST['lname'];
+        $email = $_POST['email'];
+
         try {
             $textWriter = new TextWriter(FILE_SAVE_PATH);
-            $textWriter->fillRow($form->getAllFields(), $_POST['fname'] . ' ' . $_POST['lname']); // TODO, use getAllFieldValues()
+            $textWriter->fillRow($form->getAllFieldValues(), $name);
 
             $excelWriter = new ExcelWriter(FILE_SAVE_PATH . "inschrijvingen.xlsx");
-            $excelWriter->fillRow($form->getAllFields()); // TODO, use getAllFieldValues()
-            $excelWriter->saveSpreadSheet();
+            $hasDuplicates = $excelWriter->hasDuplicates('Email', $form->getAllFieldValues());
+            if($hasDuplicates) {
+                ?>Paniek! Het lijkt erop dat je je al eerder hebt aangemeld met dit e-mailadres. Je inschrijving is <span style="font-weight: bold;">niet</span> opgeslagen.<br />
+                Stuur ons even een mailtje via het hieronder genoemde adres als je denkt dat het niet klopt.
+                <?php
+            }
+            else {
+                $excelWriter->fillRow($form->getAllFieldValues());
+                $excelWriter->saveSpreadSheet();
+
+                ?>
+                <span style="font-weight: bold">Bedankt voor je inschrijving! Hij is binnen. :)</span><br /><br />
+
+                Als je binnen <b>10 minuten</b> nog geen bevestiging hebt, laat het dan even weten via het e-mailadres hieronder: dan hebben wij namelijk waarschijnlijk niet je juiste adres.<br /><br />
+                Je inschrijving is definitief als het geld is overgemaakt.<br />
+                Ons rekeningnummer is: NL69 TRIO 0390 9403 21, t.n.v. de Kloosterboeren.<br /><br />
+
+                Je hebt ingevuld:<br />
+                <?php
+                echo $form->getFormattedFieldValues();
+                echo "<br />Foutje gemaakt? Vragen? Mail via het hieronder genoemde e-mailadres.";
+                $message = $form->getFormattedFieldValues();
+                $template = file_get_contents('includes/mail.txt');
+                $mailer = new Mailer('Kloosterboerderijfestival', 'info@kloosterboerderijfestival.nl', $email, $name, 'Je inschrijving voor het kloosterboerderijfestival 2018', $template, $message);
+                $mailer->send();
+            }
         } catch (Exception $e) {
             echo '<span style="color: red; "><b>Er is iets mis gegaan met je inschrijving! Something went wrong!</b></span>';
             throw $e;
         }
-        ?>
-        <span style="font-weight: bold">Bedankt voor je inschrijving! Hij is binnen. :)</span><br /><br />Je hebt ingevuld:<br />
-        <?php
-        echo $form->getFormattedFieldValues();
-        echo "<br />Foutje gemaakt? Vragen? Mail via het hieronder genoemde e-mailadres.";
-        $message = $form->getPlainFieldValues();
-        $mailer = new Mailer('Kloosterboerderijfestival', 'info@kloosterboerderijfestival.nl', $_POST['email'], $message);
-        $mailer->send();
+
     } else {
         echo "<span style=\"color: red; \">Niet alle velden zijn goed ingevuld:<br />\r\n";
         echo $errors;
         echo "</span><br /><br />\r\n";
         $form->display();
-//        echo "<pre>";var_dump($_POST);echo "</pre>";
     }
 } else {
     $form->display();
 }
-//echo file_get_contents('phpincludes/footer.inc');
 echo $footer;
 ?>

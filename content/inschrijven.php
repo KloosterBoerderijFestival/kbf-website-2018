@@ -15,7 +15,6 @@ const ARBITRARY_CONSTANT_HIGH_ENOUGH_TO_ENSURE_PROPER_INPUT = 3;
 
 require_once('vendor/autoload.php');
 require_once('includes/ExcelWriter.php');
-require_once('includes/TextWriter.php');
 require_once('includes/InsForm.php');
 require_once('includes/Mailer.php');
 
@@ -58,9 +57,6 @@ if (count($_POST) > ARBITRARY_CONSTANT_HIGH_ENOUGH_TO_ENSURE_PROPER_INPUT) {
         $email = $_POST['email'];
 
         try {
-            $textWriter = new TextWriter(FILE_SAVE_PATH);
-            $textWriter->fillRow($form->getAllFieldValues(), $name);
-
             $excelWriter = new ExcelWriter(FILE_SAVE_PATH . "inschrijvingen.xlsx");
             $hasDuplicates = $excelWriter->hasDuplicates('Email', $form->getAllFieldValues());
             if($hasDuplicates) {
@@ -77,7 +73,7 @@ if (count($_POST) > ARBITRARY_CONSTANT_HIGH_ENOUGH_TO_ENSURE_PROPER_INPUT) {
 
                 Als je binnen <b>10 minuten</b> nog geen bevestiging hebt, laat het dan even weten via het e-mailadres hieronder: dan hebben wij namelijk waarschijnlijk niet je juiste adres.<br /><br />
                 Je inschrijving is definitief als het geld is overgemaakt.<br />
-                Ons rekeningnummer is: NL69 TRIO 0390 9403 21, t.n.v. de Kloosterboeren.<br /><br />
+                Ons rekeningnummer is: NL69 TRIO 0390 9403 21, t.n.v. R. Teune.<br /><br />
 
                 Je hebt ingevuld:<br />
                 <?php

@@ -1,11 +1,22 @@
-<div class="gallery">
-{{ with .Resources.GetMatch "header" }}
-  {{ $scaled := .Resize "256x q80" }}
-  <div class="gallery-item">
-    <a href="{{ .RelPermalink }}">
-    <img class="thumbnail" src="{{ $scaled.Permalink }}">
-  </a>
-  </div>
-{{ end }}
-</div>
+<!-- Save the current page in a variable -->
+{{ $page := . }}
+<!-- Change the page to the image location -->
+{{ with .Site.GetPage "page" "images" }}
+  {{ $resources := .Resources.Match "**" }}
 
+<!-- Remove the prefixed path from the gallery items in the frontmatter. -->
+  {{ range $page.Params.gallery }}
+    {{ with . }}
+      {{ $.Scratch.Add "gallery" (slice (strings.TrimPrefix "/images/" .image)) }}
+    {{ end }}
+  {{ end }}
+
+<!-- Select only the images that are listed in the frontmatter -->
+  {{ range where $resources ".Name" "in" ($.Scratch.Get "gallery") }}
+    {{ $image200x := (.Resize "200x") }}
+    {{ $image400x := (.Resize "400x") }}
+    <img src="{{ $image200x.RelPermalink }}">
+    <img src="{{ $image400x.RelPermalink }}">
+    <br />
+  {{ end }}
+{{ end }}

@@ -1,27 +1,24 @@
+
 {{ partial "header" . }}
 
-{{ partial "list-item" . }}
 
-{{ if isset .Params "gallery" }}
-  <div class="py-5 text-center bg-primary">
+  <!-- Events -->
+  <div class="py-5 bg-light" id="blog">
     <div class="container">
       <div class="row">
         <div class="col-md-12">
-          <h1 class="mb-4 text-white" contenteditable="true">Best pictures</h1>
+          <h1 class="mb-4 text-primary text-center">{{ .Title }}</h1>
+          <div class="row">
+            {{ range where .Site.Pages "Type" "blog" }}
+            <div class="col-md-4 p-3">
+                {{ .Render "li" }}
+            </div>
+            {{ end }}
+          </div>
         </div>
-      </div>
-      <div class="row">
-      {{ range .Params.gallery}}
-        <img src="{{ .image }}" />
-        <div class="col-md-3 col-6 p-1">
-          <a href="{{ .image }}" data-sub-html="<h4>{{ .caption }}</h4>">
-            <img src="{{ replace .image "/images/uploads" "/images/uploads/thumbnails"}}" />
-        </div>
-      {{ end }}
-      </div>
       </div>
     </div>
-  </div>
-{{ end }}
+</div>
 
 {{ partial "footer.html" . }}
+

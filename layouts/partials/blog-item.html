@@ -2,12 +2,8 @@
   <div class="bg-light py-2"> </div>
   <div class="py-5 bg-light">
     <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <h1 class="text-center display-3 text-primary">{{ .Title }}</h1>
-          <p class="lead text-muted text-center">Door {{ .Params.Author }} op {{ .Date.Format "January 2, 2006"}}</p>
-          <p class="">{{ .Content }}</p>
-        </div>
-      </div>
+      <h1 class="text-center display-3 text-primary">{{ .Title }}</h1>
+      <p class="lead text-muted text-center">Door {{ .Params.Author }} op {{ .Date.Format "January 2, 2006"}}</p>
+      <p class="mx-auto" style="max-width: 600px">{{ .Content }}</p>
     </div>
   </div>

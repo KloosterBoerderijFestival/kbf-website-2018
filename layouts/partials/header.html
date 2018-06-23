@@ -4,11 +4,41 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- PAGE settings -->
-  <!-- <link rel="icon" href="https://templates.pingendo.com/assets/Pingendo_favicon.ico">-->
-  <title>KloosterBoerderijFestival 2018</title>
-  <meta name="description" content="Het KloosterBoerderijFestival is een ontmoetings- en inspiratieweek met een op het klooster geïnspireerd ritme van gebed, stilte en praktisch werk op de boerderij. Er is veel ruimte voor verdieping en discussie door workshops en lezingen over thema&#8217;s als duurzaamheid, vredeswerk, gemeenschapsleven en spiritualiteit.">
+  <!-- Site Title, Description, Author, and Favicon -->
+{{- with .Title | default .Site.Title }}
+  <title>{{ . }}</title>
+  <meta property="og:title" content="{{ . }}" />
+  <meta name="twitter:title" content="{{ . | truncate 70 }}" />
+{{- end }}
+
+{{- with .Description | default .Site.Params.description | default .Summary }}
+  <meta name="description" content="{{ . }}">
+  <meta property="og:description" content="{{ . }}">
+  <meta name="twitter:description" content="{{ . | truncate 200 }}">
+{{- end }}
+  <meta name="author" content="{{ .Site.Author.name }}"/>
+{{- with .Site.Params.favicon }}
+  <link href='{{ . | absURL }}' rel='icon' type='image/x-icon'/>
+{{- end -}}
+
+{{- with .Params.share_img | default .Params.image | default .Site.Params.logo }}
+  <meta property="og:image" content="{{ . | absURL }}" />
+  <meta name="twitter:image" content="{{ . | absURL }}" />
+{{- end }}
+  <meta name="twitter:card" content="summary" />
+{{- with .Site.Author.twitter }}
+  <meta name="twitter:site" content="@{{ . }}" />
+  <meta name="twitter:creator" content="@{{ . }}" />
+{{- end }}
+
+  <meta property="og:url" content="{{ .Permalink }}" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="{{ .Site.Title }}" />
+<!-- Hugo Version number -->
+  {{ .Hugo.Generator -}}
+
   <meta name="keywords" content="klooster boerderij festival kloosterboerderijfestival boeren gebed ritme buitenwerk inspiratie">
+
   <!-- CSS dependencies -->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css" type="text/css">
   <link rel="stylesheet" href="/css/theme.css" type="text/css">

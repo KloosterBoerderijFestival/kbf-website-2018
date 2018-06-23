@@ -17,3 +17,11 @@ piwik     = true                         # If true, Piwik integration is enabled
 piwik_url = "//analytics.biomatt.nl/"    # URL to your Piwik installation. Must End with a slash
 piwik_id = 5 # Id of your site in Piwik
 gallery  = true
+description = "Het KloosterBoerderijFestival is een ontmoetings- en inspiratieweek met een op het klooster geïnspireerd ritme van gebed, stilte en praktisch werk op de boerderij. Er is veel ruimte voor verdieping en discussie door workshops en lezingen over thema&#8217;s als duurzaamheid, vredeswerk, gemeenschapsleven en spiritualiteit."
+logo = "assets/kbf.png"
+
+[Author]
+  name = "KloosterBoerderijFestival"
+  facebook = "kloosterboerderijfestival"
+  github = "KloosterBoerderijFestival"
+  twitter = "KloosterBF"

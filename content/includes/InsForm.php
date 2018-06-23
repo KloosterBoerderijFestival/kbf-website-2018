@@ -155,6 +155,14 @@ class InsEmailField extends InsField
     }
 }
 
+class InsAreaField extends InsField
+{
+    function getFormField()
+    {
+        return '<textarea id="'.$this->name.'" name="' . $this->name . '" cols="'. $this->size .'" rows="5">' . $_POST[$this->name] . '</textarea>';
+    }
+}
+
 class InsCaptchaField extends InsField
 {
     function validate()

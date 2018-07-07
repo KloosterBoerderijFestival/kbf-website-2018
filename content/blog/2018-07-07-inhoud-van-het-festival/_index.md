@@ -2,7 +2,7 @@
 date: 2018-07-07T00:00:00.000Z
 title: Meer over de inhoud van het festival
 author: Wilma
-featured_image: /images/IMG_7744.JPG
+featured_image: /images/P8130014.JPG
 type: blog
 ---
 

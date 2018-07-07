@@ -45,7 +45,7 @@ $nogMeer->addField(new InsField('Heb je dieetwensen?', 'dieetwensen', false, $de
 $nogMeer->addField(new InsField('Wat is je telefoonnummer?', 'telnr', true, $defaultSize));
 $nogMeer->addField(new InsField('Welke muziekinstrumenten ben je van plan mee te nemen?', 'muziekinstrumenten', false, $defaultSize));
 $nogMeer->addField(new InsField('Zou je zelf een workshop(je) willen geven, en zo ja, waarover?', 'workshopje', false, $defaultSize));
-$nogMeer->addField(new InsDateSelectField('Welke dagen kom je naar het KloosterBoerderijFestival?', 'welkedagen', false, '2018-08-11', '2018-08-18'));
+$nogMeer->addField(new InsDateSelectField('Welke dagen kom je naar het KloosterBoerderijFestival?', 'welkedagen', false, '2018-08-10', '2018-08-17'));
 $nogMeer->addField(new InsField('Hoe oud ben je?', 'leeftijd', true, $defaultSize));
 $nogMeer->addField(new InsField('Wat zoek je of verwacht je op het KloosterBoerderijFestival?', 'verwachtingen', true, $defaultSize));
 $nogMeer->addField(new InsField('Waar denk je aan als je aan een boerderij denkt?', 'denkaanboerderij', false, $defaultSize));

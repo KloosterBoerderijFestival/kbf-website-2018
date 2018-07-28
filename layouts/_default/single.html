@@ -1,0 +1,14 @@
+{{ partial "header" . }}
+
+  <!-- Page -->
+  <div class="bg-light py-2"> </div>
+  <div class="py-5 bg-light">
+    <div class="container">
+      <h1 class="text-center display-3 text-primary">{{ .Title }}</h1>
+      <p class="mx-auto" style="max-width: 600px">{{ .Content }}</p>
+    </div>
+  </div>
+
+
+{{ partial "footer.html" . }}
+

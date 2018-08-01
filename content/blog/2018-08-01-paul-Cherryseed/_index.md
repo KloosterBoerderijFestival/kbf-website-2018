@@ -4,6 +4,8 @@ title: Paul Cherryseed gaat muziek maken op het festival
 author: Wilma
 featured_image: /images/Paul_Cherryseed.jpg
 type: blog
+gallery:
+  - image: /images/Paul_Cherryseed.jpg
 ---
 
 Op donderdagavond 16 augustus komt Paul Cherryseed muziek maken op het KloosterBoerderijFestival. 

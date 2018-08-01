@@ -8,7 +8,7 @@ gallery:
   - image: /images/Paul_Cherryseed.jpg
 ---
 
-Op donderdagavond 16 augustus komt Paul Cherryseed muziek maken op het KloosterBoerderijFestival. 
+Op donderdagavond 16 augustus komt [Paul Cherryseed](http://www.paulcherryseed.com/nl/) muziek maken op het KloosterBoerderijFestival. 
 
 Paul Cherryseed maakt vrolijke liedjes over niet altijd vrolijke thema’s. “Hartverscheurende, vruchtbare, verlossende of vrolijke verhalen, met hoop en Goed nieuws. Sprookjes die te mooi lijken om waar te zijn, maar tóch waar zijn. Zelfgeschreven folkliedjes en pop- folk- en gospelsongs van anderen, met vers nieuws vanuit de hemel.”
 
@@ -17,7 +17,9 @@ Paul Cherryseed was ooit actief voor Time to Turn, waar ook het KloosterBoerderi
 Thema’s in zijn liedjes zijn vluchtelingen, onschuldige gevangenen, Schotland… Zijn laatste plaat (2016) heet Saint Anonymous, over hoe we onopvallend een zegen kunnen zijn voor anderen. 
 
 Wil je alvast wat liedjes horen? 
-https://www.nporadio1.nl/dit-is-de-nacht/onderwerpen/244515-live-muziek-paul-cherryseed
-https://www.youtube.com/watch?v=qRV0SntgPVM
 
-En meer over Paul Cherryseed kun je lezen op zijn site: http://paulcherryseed.com
+- https://www.nporadio1.nl/dit-is-de-nacht/onderwerpen/244515-live-muziek-paul-cherryseed
+- 
+<div class="embed-responsive embed-responsive-4by3">
+<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/qRV0SntgPVM?autoplay=0" allowfullscreen=""> </iframe>
+</div>

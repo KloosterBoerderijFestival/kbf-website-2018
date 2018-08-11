@@ -2,12 +2,13 @@
 date: 2018-08-11T00:00:00.000Z
 title: KBF 2018 is begonnen
 author: Nelleke
-featured_image: /images/koeien.JPG
+featured_image: /images/IMG_8103.JPG
 type: blog
 gallery:
-  - image: /images/koeien.JPG
-  - image: /images/werken_in_de planten.JPG
-  - image: /images/koeien_en_planten rond_nS.JPG
+  - image: /images/IMG_8103.JPG
+  - image: /images/IMG_8129.JPG
+  - image: /images/IMG_8114.JPG
+  - image: /images/IMG_8138.JPG
 ---
 
 Na de avondmaaltijd met ongeveer 22 mensen kregen we een rondleiding door het klooster, sowieso handig om iets minder te verdwalen, maar vooral mooi om iets mee te krijgen van de gewoontes van de trappisten die hier woonden. De stilte bewaren, regelmatig bidden en ook hard werken zijn dingen waarin we de monniken dit KBF willen navolgen. Tegelijkertijd wordt er door stichting Nieuw Sion gezocht naar mogelijkheden om het monastieke leven in deze tijd vorm te geven. Verschillende vertrekken liggen vol met gereedschap en verf, omdat 1 september het Jongerenklooster start en het klooster klaar moet zijn om weer bewoond te worden. We zien waar er gewerkt kan worden!

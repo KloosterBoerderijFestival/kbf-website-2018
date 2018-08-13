@@ -11,6 +11,8 @@ Broden:
   - [Wilma's zuurdesem](#wilma-s-zuurdesembrood) + [hoe maak je een starter](#hoe-maak-je-een-starter). 
   - [Renny's en Ronalds zuurdesem brood](#renny-s-ronald-s-zuurdesem-brood)
 
+![](http://www.kloosterboerderijfestival.nl/wp-content/uploads/2016/09/P7254529.jpg)
+
 En nog wat recepten van de maaltijden (ook door Anna): 
 
   - [doperwtenpesto](#doperwtenpesto)

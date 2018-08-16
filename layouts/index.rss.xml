@@ -20,6 +20,7 @@
       {{ with .Site.Author.email }}<author>{{.}}{{ with $.Site.Author.name }} ({{.}}){{end}}</author>{{end}}
       <guid>{{ .Permalink }}</guid>
       <description>{{ .Summary | html }}</description>
+      <enclosure url="{{ absURL .Params.Featured_image }}" type="image/jpeg"/>
     </item>
     {{ end }}
   </channel>

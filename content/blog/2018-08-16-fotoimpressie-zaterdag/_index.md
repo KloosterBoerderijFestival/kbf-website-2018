@@ -11,7 +11,6 @@ gallery:
   - image: /images/AZ2_0877.JPG
   - image: /images/AZ2_0875.JPG
   - image: /images/AZ2_0874.JPG
-  - image: /images/AZ2_0863.JPG
   - image: /images/AZ2_0906_stitch.JPG
   - image: /images/AZ2_0897_stitch.JPG
   - image: /images/AZ2_0889_stitch.JPG
@@ -26,7 +25,6 @@ gallery:
   - image: /images/AZ2_1029_stitch.JPG
   - image: /images/AZ2_1014.JPG
   - image: /images/AZ2_1013.JPG
-  - image: /images/AZ2_0996.JPG
   - image: /images/AZ2_1046.JPG
   - image: /images/AZ2_1057.JPG
   - image: /images/AZ2_1050.JPG
@@ -39,7 +37,6 @@ gallery:
   - image: /images/AZ2_1123.JPG
   - image: /images/AZ2_1116.JPG
   - image: /images/AZ2_1160.JPG
-  - image: /images/AZ2_1142.JPG
   - image: /images/AZ2_1132.JPG
   - image: /images/AZ2_1164.JPG
   - image: /images/AZ2_1162.JPG

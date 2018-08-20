@@ -1,9 +1,9 @@
 backend:
-  name: github
-  repo: KloosterBoerderijFestival/kbf-website-2018
-#  name: git-gateway
-#  identity_url: "https://kbf2018.netlify.com/.netlify/identity"
-#  gateway_url: "https://kbf2018.netlify.com/.netlify/git/github"
+#  name: github
+#  repo: KloosterBoerderijFestival/kbf-website-2018
+  name: git-gateway
+  identity_url: "https://kbf2018.netlify.com/.netlify/identity"
+  gateway_url: "https://kbf2018.netlify.com/.netlify/git/github"
 #  accept_roles: #optional - accepts all users if left out
 #    - admin
 #    - editor

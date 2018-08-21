@@ -2,6 +2,8 @@ baseURL = "https://2018.kloosterboerderijfestival.nl/"
 languageCode = "en-us"
 title = "KloosterBoerderijFestival 2018"
 
+enableRobotsTXT = true
+
 [[menu.main]]
     url = "/"
     name = "Home"

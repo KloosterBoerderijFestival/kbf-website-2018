@@ -1,0 +1,12 @@
+---
+date: 2018-09-23T00:00:00.000Z
+title: Er drijft een wolk in dit vel papier
+author: Nelleke
+featured_image: /images/IMG_8499.JPG
+type: blog
+---
+Ik ben geen dichter, maar dankzij Tjirks bijdrage op het KBF zie ik nog wel eens een wolk in een vel papier. Of twijfel ik wat langer voor de schappen in de supermarkt (sorry dat ik daar nog kom :-D) En denk ik na over mijn bereidheid om wat meer te betalen voor de producten die ik vaak gebruik. Ik had een klasgenoot die als kleine daad van verzet had bedacht om iedere keer als hij boodschappen ging doen, minimaal 1 biologisch en/of Fairtrade product in zijn mandje te stoppen. Met iedere kassabon gaf hij zo een signaal aan de supermarkt dat hij bereidt was meer te betalen dan het minimale. Heeft dat zin? Ik weet het niet, en van de zomer onder die boom kwamen we er ook niet over uit. Wachten op de overheid of toch maar, misschien tegen beter weten in, zelf beginnen? Genoeg stof om over na te denken, en hopelijk nog eens met elkaar over door te praten. Misschien tijdens het KBF-weekend?
+
+Er drijft een wolk in dit vel papier
+
+Als je een dichter bent, dan zie je duidelijk dat er een wolk drijft in dit vel papier. Zonder wolk is er geen regen; zonder regen kunnen de bomen niet groeien; en zonder bomen kunnen we geen papier maken. De wolk is nodig voor het bestaan van het papier. Als de wolk er niet is, kan dit vel papier er ook niet zijn... Als we nog dieper in dit papier kijken, kunnen we er zonneschijn in zien. Als de zon er niet zou zijn, kan het bos niet groeien... En zo weten we dat er ook zonneschijn in dit vel papier is. Als we nog langer kijken, kunnen we de houthakker zien die de boom velde en hem naar de fabriek bracht waar hij omgevormd werd tot papier. En we zien de tarwe. We weten dat de houthakker niet kan leven zonder zijn dagelijks brood en daarom is de tarwe die zijn brood werd, eveneens in dit vel papier. En ook zijn vader en zijn moeder zijn in dit papier... Als we nog dieper kijken, zien we dat we er ook zelf in zijn. Dat is niet zo moeilijk in te zien: wanneer we naar een vel papier kijken, wordt het vel een deel van onze waarneming... We kunnen dus zeggen dat alles hier is, in en met dit vel papier. Er is niets aan te wijzen dat niet hier is - tijd, ruimte, de aarde, de regen, de mineralen in de bodem, de zon, de wolk, de rivier, de warmte... Dit vel papier bestaat omdat al het andere bestaat (Thich Nhat Hanh, cit. in De natuur als beeld in religie, filosofie en kunst, Matthijs. G.C. Schouten, KNNV Uitgeverij, Utrecht, 2001)

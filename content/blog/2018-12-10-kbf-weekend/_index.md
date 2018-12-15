@@ -59,6 +59,7 @@ resources:
   params:
     caption: "De bladeren werden bijeengeharkt"
     credits: "Credits"
+
 ---
 
 Je ouderlijk huis. 

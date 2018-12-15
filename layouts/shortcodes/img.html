@@ -1,0 +1,8 @@
+{{ $img := $.Page.Resources.GetMatch (.Get 0)}}
+{{ $thumbnail := $img.Resize "600x" }}
+{{ $fullsize := $img.Resize "1200x" }}
+
+<a href="{{ $fullsize.Permalink }}" data-fancybox="gallery" data-caption="{{ $img.Params.caption }}">
+  <img src="{{ $thumbnail.Permalink }}" alt="" />
+</a>
+

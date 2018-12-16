@@ -1,8 +1,10 @@
 {{ $img := $.Page.Resources.GetMatch (.Get 0)}}
-{{ $thumbnail := $img.Resize "600x" }}
+{{ $thumbnail := $img.Resize "400x" }}
 {{ $fullsize := $img.Resize "1200x" }}
 
-<a href="{{ $fullsize.Permalink }}" data-fancybox="gallery" data-caption="{{ $img.Params.caption }}">
-  <img src="{{ $thumbnail.Permalink }}" alt="" />
-</a>
-
+<div class="col-md-12 p-3">
+  <a href="{{ $fullsize.Permalink }}" data-fancybox="gallery" data-caption="{{ $img.Params.caption }}">
+    <img class="img-fluid d-block" src="{{ $thumbnail.Permalink }}"> 
+  </a>
+  <p class="mt-2 mb-0">{{ $img.Params.caption }}</p>
+</div>

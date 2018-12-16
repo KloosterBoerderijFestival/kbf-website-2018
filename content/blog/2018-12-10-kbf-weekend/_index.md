@@ -4,30 +4,6 @@ title: Blog Weekend
 author: Leen
 featured_image: /images/IMG_8345.JPG
 type: blog
-gallery:
-  - image: /images/IMG_1992.JPG
-  - image: /images/IMG_1987.JPG
-  - image: /images/IMG_1993.JPG
-  - image: /images/IMG_1996.JPG
-  - image: /images/IMG_2006.JPG
-  - image: /images/IMG_2007.JPG
-  - image: /images/IMG_2012.JPG
-  - image: /images/IMG_2015.JPG
-  - image: /images/IMG_2023.JPG
-  - image: /images/IMG_2047.JPG
-  - image: /images/IMG_2075.JPG
-  - image: /images/IMG_2077.JPG
-  - image: /images/IMG_20181122_232032.jpg
-  - image: /images/IMG_20181123_171031.jpg
-  - image: /images/IMG_20181124_091146.jpg
-  - image: /images/IMG_20181124_121016.jpg
-  - image: /images/IMG_20181124_180642.jpg
-  - image: /images/IMG_20181125_114111.jpg
-  - image: /images/IMG_20181125_120325.jpg
-  - image: /images/IMG_20181125_110039.jpg
-  - image: /images/IMG_20181125_121840.jpg
-  - image: /images/IMG_20181125_125406.jpg
-  - image: /images/IMG_20181125_163733.jpg
 resources:
 - name: kachel
   src: IMG_20181122_232032.jpg
@@ -49,6 +25,8 @@ resources:
   params:
     caption: "De tomaten en paprikaplanten van de voorbije zomer werden neergehaald. De kas/serre zag er meteen helemaal anders uit."
     credits: "Credits"
+- name: boerderij2
+  src: IMG_1987.jpg
 - name: wilgen
   src: IMG_2012.JPG
   params:
@@ -59,7 +37,66 @@ resources:
   params:
     caption: "De bladeren werden bijeengeharkt"
     credits: "Credits"
-
+- name: eten
+  src: IMG_20181124_091146.jpg
+- name: dansen1
+  src: IMG_2075.jpg
+- name: dansen2
+  src: IMG_2077.jpg
+- name: remork1
+  src: IMG_20181123_171031.jpg
+  params:
+    caption: "Ter voorbereiding veel hout gaan halen dat we mochten opstoken."
+- name: remork2
+  src: IMG_20181125_121840.jpg
+  params:
+    caption: "Een goed excuus om op de remorque/kar te zitten onderweg. In Melsele kan dat!😉 "
+- name: dienst
+  src: IMG_20181125_110039.jpg
+  params:
+    caption: "Onze zondagsdienst die eigenlijk gewoon één lang taizégebed rond een kampvuur in een mooi stukje groen was."
+- name: pianostuk
+  src: IMG_20181124_180642.jpg
+  params:
+    caption: "Een pianostuk dat door zes handen gespeeld werd."
+- name: woodblessings
+  src: IMG_20181124_121016.jpg
+  params:
+    caption: "Mooie woodblessings die plots verschenen als uitdeelkadootjes"
+- name: breien
+  src: IMG_2023.jpg
+  params:
+    caption: "Gezellige breimomentjes rond de kachel"
+- name: kampvuur1
+  src: IMG_20181125_125406.jpg
+  params:
+    caption: "Het kampvuurtje van onze dienst dat uitmondde in een groot vreugdevuur met zelf geroosterde toastjes." 
+- name: kampvuur2
+  src: 20181125_115259.jpg
+- name: kampvuur3
+  src: IMG_20181125_114111.jpg
+- name: kampvuur4
+  src: IMG_20181125_123954.jpg
+  params:
+    caption: "Een vuur dat ik alvast nog steeds meedraag."
+- name: afwas
+  src: IMG_1996.jpg
+  params:
+    caption: "Hoe alles zo automatische verliep. Workshopjes en afwassers dienden zich zomaar aan, het opruimen was vooral heel gezellig,.."
+- name: opruimen
+  src: IMG_20181125_163733.jpg
+- name: koken
+  src: IMG_2014.jpg
+  params:
+    caption: "Steeds eerlijk, eerlijk eten uit de tuin locaal meegenomen vanuit Nederland 😉. De beste seitan ooit en een fantastich kookteam!"
+- name: koken2
+  src: 20181124_124754.jpg
+- name: koken3
+  src: IMG_2047.jpg
+- name: moestuin1
+  src: IMG_1993.jpg
+- name: moestuin2
+  src: IMG_2006.jpg
 ---
 
 Je ouderlijk huis. 
@@ -81,7 +118,9 @@ En waw, ze kwamen écht! Mijn lieve vrienden van meer ecologische kringen die ni
 {{< img "welkom" >}}
 
 
+
 ## Klooster
+
 De kapel die Moeke en Vake met zoveel liefde en aandacht maakten in ons gastvrij verblijf, mocht plots 20 jongeren ontvangen op vrijdagavond. De dag erna waren we zelfs met 28 en geraakten we er – mits goed door te schuiven- allemaal in. 
 De verwarming kon meteen uit, voila, de planeet weer gered 😊
 
@@ -94,11 +133,13 @@ Deze bewuste tijd om stil te staan, gaf ruimte om meer verbinding te creëren me
 ## Boerderij
 Op het festival werken we elke voormiddag behalve zondag. En een weekend is (helaas) kort. We hadden enkel zaterdagvoormiddag. 
 
-{{< img "boerderij" >}}
-
-{{< img "wilgen" >}}
-
-{{< img "blaadjes" >}}
+- {{< img "boerderij" >}}
+- {{< img boerderij2 >}}
+- {{< img "wilgen" >}}
+- De aardappelen werden gerooid en de hele indeling van de moestuin werd omgegooid. Het was zodanig moeilijk om te stoppen dat enkele enthousiastelingen na de lunch doorwerkten om het hutje en de basisstructuur van de moestuin af te krijgen. 
+- {{< img moestuin1 >}}
+- {{< img moestuin2 >}}
+- {{< img "blaadjes" >}}
 
 Heerlijk om nog eens goed met de (werk)hand(schoen)en in de aarde te wroeten, en de vruchten hiervan dezelfde dag nog op te eten.
 
@@ -106,22 +147,32 @@ Heerlijk om nog eens goed met de (werk)hand(schoen)en in de aarde te wroeten, en
 Moeilijk om zo’n artificiële opsplitsing te maken want klooster boerderij en festival zitten zo in elkaar verweven. 
 Elke maaltijd samen is een festival voor de gezelligheid, boerderij voor het heerlijke eten en zelfs het klooster omwille van de dankbaarheid en het bewuste manier waarop we met dit locale eten en elkaar omgaan. IN al die vrienschap en het delen van dit moment samen, voel ik gods aanwezigheid. 
 
+{{< img "eten" >}}
+
 KBF is ook samen denken en inspireren. Er waren deelmomentjes rond kernwapens, collectieve intelligentie, de-google-ify your life, veganistisch koken,.. Ook werd er al gedroomd over het festival in de zomer ( 9-16 augustus, save the date!)
-De avondjes keuvelen voor de kachel, live pianomuziek en Toon Tellegenverhaaltjes luisteren en indommelen op het tapijtn de spontane folkinitiatie op zaterdagavond (en het gezicht van de reparateur van de gasmaatschappij toen hij binnenkwam). 
+De avondjes keuvelen voor de kachel, live pianomuziek en Toon Tellegenverhaaltjes luisteren en indommelen op het tapijt en de spontane folkinitiatie op zaterdagavond (en het gezicht van de reparateur van de gasmaatschappij toen hij binnenkwam).
 
-Dat was festival. 
+{{< img dansen1 >}}
+{{< img dansen2 >}}
 
-Topmomentjes: 
+### Topmomentjes
 
-- Ter voorbereiding veel hout gaan halen dat we mochten opstoken. Een goed excuus om op de remorque/kar te zitten onderweg. In Melsele kan dat!😉 
+- {{< img remork1 >}}
+- {{< img remork2 >}}
 - Workshops die als paddenstoelen uit de grond schoten. Er waren meer ideetjes dan dat er tijd was. Fijn om de talenten uit de groep zo in te zetten. 
-- Onze zondagsdienst die eigenlijk gewoon één lang taizégebed rond een kampvuur in een mooi stukje groen was.
-- Een pianostuk dat door zes handen gespeeld werd.
-- Mooie woodblessings die plots verschenen als uitdeelkadootjes
+- {{< img dienst >}}
+- {{< img pianostuk >}}
+- {{< img woodblessings >}}
 - De heerlijke gastvrijheid die we van mijn ouders, Elisabeth en Luc mochten ontvangen. Ze waren ook erg onder de indruk van onze groep en de fijne sfeer die er was. Tijdens het weekend schreef Moeke een gedicht over hoe zij onze aanwezigheid ervoer. (LINK?)
-- Steeds eerlijk, eerlijk eten uit de tuin locaal meegenomen vanuit Nederland 😉. De beste seitan ooit en een fantastich kookteam!
-- Hoe alles zo automatische verliep. Workshopjes en afwassers dienden zich zomaar aan, het opruimen was vooral heel gezellig,..
-- Gezellige breimomentjes rond de kachel
-- Het kampvuurtje van onze dienst dat uitmondde in een groot vreugdevuur met zelf geroosterde toastjes. 
-- Een vuur dat ik alvast nog steeds meedraag. 
-- Bedankt allemaal voor dit heerlijk deugddoend weekend en hopelijk tot deze zomer op het festival!
+- {{< img koken >}}
+- {{< img koken2 >}}
+- {{< img koken3 >}}
+- {{< img afwas >}}
+- {{< img opruimen >}}
+- {{< img breien >}}
+- {{< img kampvuur1 >}}
+- {{< img kampvuur2 >}}
+- {{< img kampvuur3 >}}
+- {{< img kampvuur4 >}} 
+
+Bedankt allemaal voor dit heerlijk deugddoend weekend en hopelijk tot deze zomer op het festival!

@@ -27,3 +27,6 @@ logo = "assets/kbf.png"
   facebook = "kloosterboerderijfestival"
   github = "KloosterBoerderijFestival"
   twitter = "KloosterBF"
+
+# Increase timeout for image processing
+timeout=30000

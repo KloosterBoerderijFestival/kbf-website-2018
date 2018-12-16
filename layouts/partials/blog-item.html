@@ -4,8 +4,10 @@
     <div class="container">
       <h1 class="text-center display-3 text-primary">{{ .Title }}</h1>
       <p class="lead text-muted text-center">Door {{ .Params.Author }} op {{ .Date.Format "January 2, 2006"}}</p>
-      <div class="row my-4 d-flex justify-content-center">
-        {{ .Content }}
+      <div class="row my-4 d-flex">
+        <div class="col-md-10">
+          {{ .Content }}
+        </div>  
       </div>
     </div>
   </div>

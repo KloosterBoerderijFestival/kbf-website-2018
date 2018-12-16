@@ -2,7 +2,7 @@
 date: 2018-12-10T00:00:00.000Z
 title: Blog Weekend
 author: Leen
-featured_image: /images/IMG_8345.JPG
+featured_image: /images/IMG_20181125_110039.jpg
 type: blog
 resources:
 - name: kachel
@@ -163,7 +163,7 @@ De avondjes keuvelen voor de kachel, live pianomuziek en Toon Tellegenverhaaltje
 - {{< img dienst >}}
 - {{< img pianostuk >}}
 - {{< img woodblessings >}}
-- De heerlijke gastvrijheid die we van mijn ouders, Elisabeth en Luc mochten ontvangen. Ze waren ook erg onder de indruk van onze groep en de fijne sfeer die er was. Tijdens het weekend schreef Moeke een gedicht over hoe zij onze aanwezigheid ervoer. (LINK?)
+- De heerlijke gastvrijheid die we van mijn ouders, Elisabeth en Luc mochten ontvangen. Ze waren ook erg onder de indruk van onze groep en de fijne sfeer die er was. Tijdens het weekend schreef Moeke een [gedicht](/blog/2018-11-25-ingetogen-stemming/) over hoe zij onze aanwezigheid ervoer.
 - {{< img koken >}}
 - {{< img koken2 >}}
 - {{< img koken3 >}}

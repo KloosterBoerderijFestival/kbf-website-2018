@@ -145,7 +145,7 @@ Heerlijk om nog eens goed met de (werk)hand(schoen)en in de aarde te wroeten, en
 
 ## Festival
 Moeilijk om zo’n artificiële opsplitsing te maken want klooster boerderij en festival zitten zo in elkaar verweven. 
-Elke maaltijd samen is een festival voor de gezelligheid, boerderij voor het heerlijke eten en zelfs het klooster omwille van de dankbaarheid en het bewuste manier waarop we met dit locale eten en elkaar omgaan. IN al die vrienschap en het delen van dit moment samen, voel ik gods aanwezigheid. 
+Elke maaltijd samen is een festival voor de gezelligheid, boerderij voor het heerlijke eten en zelfs het klooster omwille van de dankbaarheid en het bewuste manier waarop we met dit locale eten en elkaar omgaan. In al die vrienschap en het delen van dit moment samen, voel ik gods aanwezigheid. 
 
 {{< img "eten" >}}
 
